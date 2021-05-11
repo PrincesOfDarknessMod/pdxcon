@@ -24,9 +24,12 @@ PDXCON.50 = {
 			limit = {
 				NOT = { has_character_flag = had_PDXCON_50_met_troy_flag }
 			}
+			
+			PDXCON_populate_CK3_staff_list_effect = yes
+			
 			character:easteregg_troy_goodfellow = {
 				save_scope_as = PDXCON_lobby_person
-			}
+			}	
 		}
 
 		if = {
@@ -819,6 +822,38 @@ PDXCON.700 = {
 	title = PDXCON.700.t
 	desc = PDXCON.700.desc
 	theme = PDXCON_speakeasy
+	
+	left_portrait = {
+		character = scope:PDXCON_speakeasy_person_a
+		animation = personality_honorable
+	}
+	
+	right_portrait = {
+		character = scope:PDXCON_speakeasy_person_b
+		animation = personality_honorable
+	}
+
+
+	immediate = {
+
+		random_in_list = {
+			list = PDXCON_CK3_staff_list
+			limit = { 
+				is_available = yes	
+				NOT = { this = scope:PDXCON_speakeasy_person_b }
+			}
+			save_scope_as = PDXCON_speakeasy_person_a
+		}
+
+		random_in_list = { 
+			list = PDXCON_CK3_staff_list
+			limit = {
+				is_available = yes		
+				NOT = { this = scope:PDXCON_speakeasy_person_a }
+			}
+			save_scope_as = PDXCON_speakeasy_person_b
+		}
+	}
 	
 	option = {
 		name = PDXCON.700.option.a

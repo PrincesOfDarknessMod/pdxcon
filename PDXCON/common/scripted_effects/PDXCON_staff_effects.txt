@@ -1,0 +1,218 @@
+﻿# PDXCON staff effects
+
+PDXCON_populate_CK3_staff_list_effect = {
+	character:easteregg_fredrik_wester = {
+		add_to_list = PDXCON_CK3_staff_list
+	}
+	character:easteregg_johan_andersson = {
+		add_to_list = PDXCON_CK3_staff_list
+	}
+	character:easteregg_thomas_johansson = {
+		add_to_list = PDXCON_CK3_staff_list
+	}
+	character:easteregg_henrik_fahraeus = {
+		add_to_list = PDXCON_CK3_staff_list
+	}
+	character:easteregg_olof_bjork = {
+		add_to_list = PDXCON_CK3_staff_list
+	}
+	character:easteregg_tobias_bodlund = {
+		add_to_list = PDXCON_CK3_staff_list
+	}
+	character:easteregg_emil_tisander = {
+		add_to_list = PDXCON_CK3_staff_list
+	}
+	character:easteregg_alexander_oltner = {
+		add_to_list = PDXCON_CK3_staff_list
+	}
+	character:easteregg_linda_tiger = {
+		add_to_list = PDXCON_CK3_staff_list
+	}
+	character:easteregg_charna_frostwhisper = {
+		add_to_list = PDXCON_CK3_staff_list
+	}
+	character:easteregg_lysann_schlegeler = {
+		add_to_list = PDXCON_CK3_staff_list
+	}
+	character:easteregg_sara_wendel = {
+		add_to_list = PDXCON_CK3_staff_list
+	}
+	character:easteregg_pernilla_sparrhult = {
+		add_to_list = PDXCON_CK3_staff_list
+	}
+	character:easteregg_mathilda_bjarnehed = {
+		add_to_list = PDXCON_CK3_staff_list
+	}
+	character:easteregg_magne_skjaeran = {
+		add_to_list = PDXCON_CK3_staff_list
+	}
+	character:easteregg_matthew_frary  = {
+		add_to_list = PDXCON_CK3_staff_list
+	}
+	character:easteregg_matthew_clohessy = {
+		add_to_list = PDXCON_CK3_staff_list
+	}
+	character:easteregg_linnea_thimren = {
+		add_to_list = PDXCON_CK3_staff_list
+	}
+	character:easteregg_flavio_verna = {
+		add_to_list = PDXCON_CK3_staff_list
+	}
+	character:easteregg_sean_hughes = {
+		add_to_list = PDXCON_CK3_staff_list
+	}
+	character:easteregg_petter_vilberg = {
+		add_to_list = PDXCON_CK3_staff_list
+	}
+	character:easteregg_maximilian_olbers = {
+		add_to_list = PDXCON_CK3_staff_list
+	}
+	character:easteregg_milla_lankinen = {
+		add_to_list = PDXCON_CK3_staff_list
+	}
+	character:easteregg_jakub_potapczyk = {
+		add_to_list = PDXCON_CK3_staff_list
+	}
+	character:easteregg_ewan_cowhig_croft = {
+		add_to_list = PDXCON_CK3_staff_list
+	}
+	character:easteregg_joacim_carlberg = {
+		add_to_list = PDXCON_CK3_staff_list
+	}
+	character:easteregg_david_horler = {
+		add_to_list = PDXCON_CK3_staff_list
+	}
+	character:easteregg_paul_depre = {
+		add_to_list = PDXCON_CK3_staff_list
+	}
+	character:easteregg_debbie_lane = {
+		add_to_list = PDXCON_CK3_staff_list
+	}
+	character:easteregg_petter_lundh = {
+		add_to_list = PDXCON_CK3_staff_list
+	}	
+	character:easteregg_nicholas_meredith = {
+		add_to_list = PDXCON_CK3_staff_list
+	}	
+	character:easteregg_william_riggott = {
+		add_to_list = PDXCON_CK3_staff_list
+	}	
+	character:easteregg_anna_johansson = {
+		add_to_list = PDXCON_CK3_staff_list
+	}
+	character:easteregg_arkadiusz_majewski = {
+		add_to_list = PDXCON_CK3_staff_list
+	}	
+	character:easteregg_artur_kacprzak = {
+		add_to_list = PDXCON_CK3_staff_list
+	}		
+	character:easteregg_anton_leirnes = {
+		add_to_list = PDXCON_CK3_staff_list
+	}	
+	character:easteregg_anton_sorokin = {
+		add_to_list = PDXCON_CK3_staff_list
+	}	
+	character:easteregg_joel_hansson = {
+		add_to_list = PDXCON_CK3_staff_list
+	}		
+	character:easteregg_malin_jonsson = {
+		add_to_list = PDXCON_CK3_staff_list
+	}		
+	character:easteregg_max_weltz = {
+		add_to_list = PDXCON_CK3_staff_list
+	}		
+	character:easteregg_jonas_wickerstrom = {
+		add_to_list = PDXCON_CK3_staff_list
+	}
+	character:easteregg_arthur_bialecki = {
+		add_to_list = PDXCON_CK3_staff_list
+	}	
+	character:easteregg_patrick_mauffrey = {
+		add_to_list = PDXCON_CK3_staff_list
+	}	
+	character:easteregg_viktor_stadler = {
+		add_to_list = PDXCON_CK3_staff_list
+	}	
+	character:easteregg_jesse_henning = {
+		add_to_list = PDXCON_CK3_staff_list
+	}	
+	character:easteregg_rodrigue_delrue = {
+		add_to_list = PDXCON_CK3_staff_list
+	}
+	character:easteregg_hanna_lohman = {
+		add_to_list = PDXCON_CK3_staff_list
+	}
+	character:easteregg_daniel_moore = {
+		add_to_list = PDXCON_CK3_staff_list
+	}
+	character:easteregg_bartosz_byczynski = {
+		add_to_list = PDXCON_CK3_staff_list
+	}
+	character:easteregg_joseph_gardener = {
+		add_to_list = PDXCON_CK3_staff_list
+	}	
+	character:easteregg_peter_johannesson = {
+		add_to_list = PDXCON_CK3_staff_list
+	}	
+	character:easteregg_troy_goodfellow = {
+		add_to_list = PDXCON_CK3_staff_list
+	}	
+	character:easteregg_katya_boestad = {
+		add_to_list = PDXCON_CK3_staff_list
+	}	
+	character:easteregg_bianca_savazzi = {
+		add_to_list = PDXCON_CK3_staff_list
+	}	
+	character:easteregg_steacy_mcilwham = {
+		add_to_list = PDXCON_CK3_staff_list
+	}
+	character:easteregg_nils_wadensten = {
+		add_to_list = PDXCON_CK3_staff_list
+	}	
+	character:easteregg_andreas_olsson = {
+		add_to_list = PDXCON_CK3_staff_list
+	}
+	character:easteregg_henrik_lohmander = {
+		add_to_list = PDXCON_CK3_staff_list
+	}	
+	character:easteregg_ismael_serrano = {
+		add_to_list = PDXCON_CK3_staff_list
+	}	
+	character:easteregg_fawn_rowe = {
+		add_to_list = PDXCON_CK3_staff_list
+	}	
+	character:easteregg_lenaic_riedinger = {
+		add_to_list = PDXCON_CK3_staff_list
+	}	
+	character:easteregg_niall_bird  = {
+		add_to_list = PDXCON_CK3_staff_list
+	}	
+	character:easteregg_christian_daflos  = {
+		add_to_list = PDXCON_CK3_staff_list
+	}
+	character:easteregg_max_collin  = {
+		add_to_list = PDXCON_CK3_staff_list
+	}	
+	character:easteregg_tegan_harris  = {
+		add_to_list = PDXCON_CK3_staff_list
+	}	
+	character:easteregg_wojciech_cywinski  = {
+		add_to_list = PDXCON_CK3_staff_list
+	}	
+	character:easteregg_nikolaos_kaltsogiannis  = {
+		add_to_list = PDXCON_CK3_staff_list
+	}		
+	character:easteregg_pontus_olofsson  = {
+		add_to_list = PDXCON_CK3_staff_list
+	}
+	character:easteregg_karl_cederslatt  = {
+		add_to_list = PDXCON_CK3_staff_list
+	}	
+	character:easteregg_sebastian_borg  = {
+		add_to_list = PDXCON_CK3_staff_list
+	}	
+	character:easteregg_martin_anward  = {
+		add_to_list = PDXCON_CK3_staff_list
+	}		
+	
+}

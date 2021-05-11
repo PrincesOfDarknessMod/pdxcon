@@ -63,7 +63,7 @@ PDXCON.600.option.d:0 "Return to the lobby."
 PDXCON.600.option.d.tt:0 "You wish you had a funny hat. You virtually went to PDXCON REMIXED and you didn't even get a T-Shirt."
 
 PDXCON.700.t:0 "Paradox Speakeasy"
-PDXCON.700.desc:0 "I am in the Paradox Speakeasy. This is a lounge with a 1920s gangster theme. Normally, there is not alcohol at the 'bar'. PDXCON is a special occassion and there is a big party for all the staff."
+PDXCON.700.desc:0 "I am in the Paradox Speakeasy. This is a lounge with a 1920s gangster theme. Normally, there is not alcohol at the 'bar'. PDXCON is a special occassion and there is a big party for all the staff.\n\n[PDXCON_speakeasy_person_a.GetFullName] and [PDXCON_speakeasy_person_b.GetFullName] are having a conversation."
 PDXCON.700.option.a:0 "Have a drink or three"
 PDXCON.700.option.a.tt:0 "You will gain the drunk trait."
 PDXCON.700.option.b:0 "Go back to the hallway."

@@ -1,0 +1,10 @@
+﻿# PDXCON staff triggers
+
+PDXCON_700_can_be_speakeasy_person_a_trigger = {
+	is_available = yes		
+}
+
+PDXCON_700_can_be_speakeasy_person_b_trigger = {
+	is_available = yes		
+	NOT = { this = scope:PDXCON_speakeasy_person_a }
+}
