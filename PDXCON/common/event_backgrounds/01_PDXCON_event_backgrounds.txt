@@ -1,0 +1,87 @@
+﻿### EVENT BACKGROUNDS LIST:
+
+### Paradox Example ###
+
+PDXCON_lobby = {
+	background = {
+		reference = "gfx/interface/illustrations/event_scenes/PDXCON_lobby.dds"
+		environment = "environment_event_corridor"
+		ambience = "event:/SFX/Events/Backgrounds/castle_corridor_day"
+	}
+}
+
+PDXCON_hallway_titles = {
+	background = {
+		reference = "gfx/interface/illustrations/event_scenes/PDXCON_hallway_titles.dds"
+		environment = "environment_event_corridor"
+		ambience = "event:/SFX/Events/Backgrounds/castle_corridor_day"
+	}
+}
+
+PDXCON_hallway_staff = {
+	background = {
+		reference = "gfx/interface/illustrations/event_scenes/PDXCON_hallway_staff.dds"
+		environment = "environment_event_corridor"
+		ambience = "event:/SFX/Events/Backgrounds/castle_corridor_night"
+	}
+}
+
+PDXCON_theater = {
+	background = {
+		reference = "gfx/interface/illustrations/event_scenes/PDXCON_crusader_kings_theater.dds"
+		environment = "environment_event_corridor"
+		ambience = "event:/SFX/Events/Backgrounds/castle_corridor_night"
+	}
+}
+
+PDXCON_lounge = {
+	background = {
+		reference = "gfx/interface/illustrations/event_scenes/PDXCON_stellaris_lounge.dds"
+		environment = "environment_event_tavern2"
+		ambience = "event:/SFX/Events/Backgrounds/feasthall" 
+	}
+}
+
+PDXCON_speakeasy = {
+	background = {
+		reference = "gfx/interface/illustrations/event_scenes/PDXCON_speakeasy.dds"
+		environment = "environment_event_tavern2"
+		ambience = "event:/SFX/Events/Backgrounds/feasthall" 
+	}
+}
+
+
+PDXCON_office = {
+	background = {
+		reference = "gfx/interface/illustrations/event_scenes/PDXCON_stellaris_office.dds"
+		environment = "environment_event_torturechamber"
+		ambience = "event:/SFX/Events/Backgrounds/dungeon" 
+	}
+}
+
+PDXCON_map_room = {
+	background = {
+		reference = "gfx/interface/illustrations/event_scenes/PDXCON_treasure_hunt_map_modded_town.dds"
+#		reference = "gfx/interface/illustrations/event_scenes/PDXCON_treasure_hunt_map.dds"
+		environment = "environment_event_corridor"
+		ambience = "event:/SFX/Events/Backgrounds/castle_corridor_night"
+	}
+}
+
+
+PDXCON_music_studio = {
+	background = {
+		reference = "gfx/interface/illustrations/event_scenes/PDXCON_music_studio.dds"
+		environment = "environment_event_torturechamber"
+		ambience = "event:/SFX/Events/Backgrounds/dungeon" 
+	}
+}
+
+
+PDXCON_workspace = {
+	background = {
+		reference = "gfx/interface/illustrations/event_scenes/PDXCON_workspace.dds"
+		environment = "environment_event_torturechamber"
+		ambience = "event:/SFX/Events/Backgrounds/dungeon" 
+	}
+}

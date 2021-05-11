@@ -1,0 +1,5 @@
+﻿PDXCON_liked_game_pitch_opinion = {
+	opinion = 5
+	years = 5
+	decaying = yes	
+}

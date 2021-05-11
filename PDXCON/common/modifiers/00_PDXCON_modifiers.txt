@@ -1,0 +1,4 @@
+﻿PDXCON_paradox_modifier = {
+	icon = PDXCON_paradox_positive
+	intrigue = 2
+}

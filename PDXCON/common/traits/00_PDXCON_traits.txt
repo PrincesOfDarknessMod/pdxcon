@@ -1,0 +1,28 @@
+﻿
+PDXCON_paradox = {
+	index = 283
+	
+	icon = trait_PDXCON_paradox.dds
+	name = trait_PDXCON_paradox
+	
+	desc = {
+		first_valid = {
+					
+			triggered_desc = {
+				trigger = { is_female = yes }
+				desc = trait_PDXCON_paradox_desc_she
+			}
+			
+			triggered_desc = {
+				trigger = { female = yes }
+				desc = trait_PDXCON_paradox_desc_he
+			}	
+			
+			desc = trait_PDXCON_paradox_desc_they
+		}
+	}
+
+	martial = 2
+
+	shown_in_ruler_designer = no
+}

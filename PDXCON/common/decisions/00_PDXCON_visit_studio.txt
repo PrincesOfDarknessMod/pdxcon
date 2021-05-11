@@ -1,0 +1,21 @@
+﻿
+visit_PDXCON_decision = {
+	picture = "gfx/interface/illustrations/decisions/decision_visit_PDXCON.dds"
+
+	desc = visit_PDXCON_decision_desc
+
+	major = yes
+	
+	cooldown = { days = 10 }
+
+	is_shown = {
+		is_ai = no
+	}
+
+	effect = {
+
+		trigger_event = PDXCON.50
+	
+	}
+
+}	

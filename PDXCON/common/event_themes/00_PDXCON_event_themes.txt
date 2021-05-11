@@ -1,0 +1,154 @@
+﻿ ### Use @generic_event_theme_sound for new themes.
+ ### Please notify audio dept. if new themes occur.
+
+ @generic_event_theme_sound = "event:/SFX/Events/Themes/sfx_event_theme_type_generic"
+
+###
+
+### Attributes
+
+PDXCON_lobby = {
+	icon = {
+		reference = "gfx/interface/icons/event_types/type_learning.dds"
+	}
+	sound = {
+		reference = "event:/SFX/Events/Themes/sfx_event_theme_type_learning"
+	}
+
+	background = {
+		event_background = PDXCON_lobby
+	}	
+}
+
+PDXCON_hallway_titles = {
+	icon = {
+		reference = "gfx/interface/icons/event_types/type_learning.dds"
+	}
+	sound = {
+		reference = "event:/SFX/Events/Themes/sfx_event_theme_type_learning"
+	}
+
+	background = {
+		event_background = PDXCON_hallway_titles
+	}	
+}
+
+PDXCON_hallway_staff = {
+	icon = {
+		reference = "gfx/interface/icons/event_types/type_stewardship.dds"
+	}
+	sound = {
+		reference = "event:/SFX/Events/Themes/sfx_event_theme_type_stewardship"
+	}
+
+	background = {
+		event_background = PDXCON_hallway_staff
+	}	
+}
+
+# Paradox Theater
+
+PDXCON_theater = {
+	icon = {
+		reference = "gfx/interface/icons/event_types/type_martial.dds"
+	}
+	sound = {
+		reference = "event:/SFX/Events/Themes/sfx_event_theme_type_war"
+	}
+
+	background = {
+		event_background = PDXCON_theater
+	}	
+}
+
+# Paradox Lounge
+
+PDXCON_lounge = {
+	icon = {
+		reference = "gfx/interface/icons/event_types/type_stewardship.dds"
+	}
+	sound = {
+		reference = "event:/SFX/Events/Themes/sfx_event_theme_type_stewardship"
+	}
+
+	background = {
+		event_background = PDXCON_lounge
+	}	
+}
+
+
+# Paradox Office
+
+PDXCON_office = {
+	icon = {
+		reference = "gfx/interface/icons/event_types/type_faith.dds"
+	}
+	
+	sound = {
+		reference = "event:/SFX/Events/Themes/sfx_event_theme_type_faith"
+	}
+
+	background = {
+		event_background = PDXCON_office
+	}	
+}
+
+# Paradox Map Room
+
+PDXCON_map_room = {
+	icon = {
+		reference = "gfx/interface/icons/event_types/type_diplomacy.dds"
+	}
+	sound = {
+		reference = "event:/SFX/Events/Themes/sfx_event_theme_type_diplomacy"
+	}
+
+	background = {
+		event_background = PDXCON_map_room
+	}	
+}
+
+# Paradox Map Room
+
+PDXCON_speakeasy = {
+	icon = {
+		reference = "gfx/interface/icons/event_types/type_diplomacy.dds"
+	}
+	sound = {
+		reference = "event:/SFX/Events/Themes/sfx_event_theme_type_diplomacy"
+	}
+
+	background = {
+		event_background = PDXCON_speakeasy
+	}	
+}
+
+# Paradox Music Studio
+
+PDXCON_music_studio = {
+	icon = {
+		reference = "gfx/interface/icons/event_types/type_diplomacy.dds"
+	}
+	sound = {
+		reference = "event:/SFX/Events/Themes/sfx_event_theme_type_diplomacy"
+	}
+
+	background = {
+		event_background = PDXCON_music_studio
+	}	
+}
+
+# Paradox Work Space
+
+PDXCON_workspace = {
+	icon = {
+		reference = "gfx/interface/icons/event_types/type_diplomacy.dds"
+	}
+	sound = {
+		reference = "event:/SFX/Events/Themes/sfx_event_theme_type_diplomacy"
+	}
+
+	background = {
+		event_background = PDXCON_workspace
+	}	
+}

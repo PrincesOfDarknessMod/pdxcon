@@ -1,0 +1,7 @@
+﻿# Paradox Example Dynasties
+
+PDXCON_paradox_dynasty = {
+	name= "dynn_PDXCON_paradox"
+	culture = "swedish"
+	motto = dynn_PDXCON_paradox_motto
+}

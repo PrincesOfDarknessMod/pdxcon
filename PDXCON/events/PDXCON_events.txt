@@ -1,0 +1,884 @@
+﻿namespace = PDXCON
+
+PDXCON.50 = {
+	type = character_event
+	title = PDXCON.50.t
+	desc = {
+		desc = PDXCON.50.desc
+		triggered_desc = {
+			trigger = {
+				NOT = { has_character_flag = had_PDXCON_50_met_troy_flag }
+			}
+			desc = PDXCON.50.desc.meet_troy
+		}	
+	}
+	theme = PDXCON_lobby
+	left_portrait = {
+		character = scope:PDXCON_lobby_person
+		animation = personality_honorable
+	}
+	
+	immediate = {
+	
+		if = {
+			limit = {
+				NOT = { has_character_flag = had_PDXCON_50_met_troy_flag }
+			}
+			character:easteregg_troy_goodfellow = {
+				save_scope_as = PDXCON_lobby_person
+			}
+		}
+
+		if = {
+			limit = {
+				has_character_flag = had_PDXCON_50_met_troy_flag
+			}
+			ROOT = {
+				save_scope_as = PDXCON_lobby_person
+			}
+		}		
+	}
+	
+	option = {
+		name = PDXCON.50.option.a
+		trigger_event = PDXCON.100
+	}
+
+	option = {
+		name = PDXCON.50.option.b
+		trigger_event = PDXCON.600
+	}	
+
+	option = {
+		name = PDXCON.50.option.c
+		trigger_event = PDXCON.1000
+	}	
+	
+	after = {
+		add_character_flag = had_PDXCON_50_met_troy_flag
+	}
+				
+}
+
+
+PDXCON.100 = {
+	type = character_event
+	title = PDXCON.100.t
+	desc = PDXCON.100.desc
+	theme = PDXCON_hallway_titles
+	
+	option = {
+		name = PDXCON.100.option.a
+		trigger_event = PDXCON.200
+	}
+
+	option = {
+		name = PDXCON.100.option.b
+		trigger_event = PDXCON.300
+	}	
+			
+	option = {
+		name = PDXCON.100.option.c
+		trigger_event = PDXCON.400
+	}			
+			
+	option = {
+		name = PDXCON.100.option.d
+		trigger_event = PDXCON.500
+	}			
+
+	option = {
+		name = PDXCON.100.option.e
+		trigger_event = PDXCON.50
+	}		
+}
+
+PDXCON.200 = {
+	type = character_event
+	title = PDXCON.200.t
+	desc = {
+		desc = PDXCON.200.desc
+		first_valid = {
+			triggered_desc = {
+				trigger = {
+					has_character_flag = PDXCON_200_loved_flag 
+				}
+				desc = PDXCON.200.desc.pleased
+			}
+			triggered_desc = {
+				trigger = {
+					has_character_flag = PDXCON_200_hated_flag
+				}
+				desc = PDXCON.200.desc.worried
+			}			
+			desc = PDXCON.200.desc.expectations
+		}
+	}
+	
+	theme = PDXCON_theater
+	
+	left_portrait = {
+		character = scope:PDXCON_alex
+		animation = personality_honorable
+	}
+	
+	right_portrait = {
+		character = scope:PDXCON_henrik
+		animation = personality_honorable
+	}	
+	
+	immediate = {
+		play_music_cue = "mx_cue_epic_sacral_moment"	
+		
+		character:easteregg_alexander_oltner = {
+			save_scope_as = PDXCON_alex
+		}
+		
+		character:easteregg_henrik_fahraeus = {
+			save_scope_as = PDXCON_henrik
+		}
+	}	
+	
+	option = {
+		name = PDXCON.200.option.a
+		trigger = {
+			NOT = { has_trait = PDXCON_paradox }
+			NOT = { has_character_flag = PDXCON_200_loved_flag }
+			NOT = { has_character_flag = PDXCON_200_hated_flag }
+		}
+		
+		remove_short_term_gold = minor_gold_value
+			
+		add_trait = PDXCON_paradox
+		
+		add_martial_lifestyle_xp = miniscule_lifestyle_xp
+
+		add_character_flag = PDXCON_200_loved_flag
+
+		scope:PDXCON_alex = {
+			add_stress = minor_stress_loss
+		}
+		
+		scope:PDXCON_henrik = {
+			add_stress = minor_stress_loss
+		}
+		
+		
+		
+		trigger_event = PDXCON.200
+	}
+
+	option = {
+		name = PDXCON.200.option.c
+		trigger = {
+			NOT = { has_trait = PDXCON_paradox }
+			NOT = { has_character_flag = PDXCON_200_loved_flag }
+			NOT = { has_character_flag = PDXCON_200_hated_flag }			
+		}
+		
+		add_character_flag = PDXCON_200_hated_flag
+		
+		if = {
+			limit = {
+				NOT = { has_trait = cynical }
+			}
+			if = {
+				limit = {
+					has_trait = zealous 
+				}
+				remove_trait = zealous
+			}
+			add_trait = cynical
+		}
+
+		add_trait = PDXCON_paradox
+		
+		add_martial_lifestyle_xp = miniscule_lifestyle_xp
+
+		scope:PDXCON_alex = {
+			add_stress = medium_stress_gain
+		}
+		
+		scope:PDXCON_henrik = {
+			add_stress = medium_stress_gain
+		}
+
+		trigger_event = PDXCON.200
+	}
+
+	option = {
+		name = PDXCON.200.option.b
+		trigger_event = PDXCON.100
+	}	
+				
+}
+
+PDXCON.300 = {
+	type = character_event
+	title = PDXCON.300.t
+	desc = PDXCON.300.desc
+	theme = PDXCON_lounge
+	left_portrait = {
+		character = scope:PDXCON_lounge_person_a
+		animation = personality_honorable
+	}
+	
+	right_portrait = {
+		character = scope:PDXCON_lounge_person_b
+		animation = personality_honorable
+	}			
+	
+	immediate = {
+
+		random_list = {
+			100 = {
+				character:easteregg_johan_andersson = {
+					save_scope_as = PDXCON_lounge_person_a 
+				}
+			}
+			
+			100 = {
+				character:easteregg_charna_frostwhisper = {
+					save_scope_as = PDXCON_lounge_person_a 
+				}
+			}	
+
+			100 = {
+				character:easteregg_magne_skjaeran = {
+					save_scope_as = PDXCON_lounge_person_a 
+				}
+			}	
+
+			100 = {
+				character:easteregg_sean_hughes = {
+					save_scope_as = PDXCON_lounge_person_a 
+				}
+			}
+
+			100 = {
+				character:easteregg_olof_bjork = {
+					save_scope_as = PDXCON_lounge_person_a 
+				}
+			}
+			100 = {
+				character:easteregg_sara_wendel = {
+					save_scope_as = PDXCON_lounge_person_a 
+				}
+			}	
+			100 = {
+				character:easteregg_matthew_clohessy = {
+					save_scope_as = PDXCON_lounge_person_a
+				}
+			}	
+			100 = {
+				character:easteregg_maximilian_olbers = {
+					save_scope_as = PDXCON_lounge_person_a 
+				}
+			}			
+			
+			100 = {
+				character:easteregg_emil_tisander  = {
+					save_scope_as = PDXCON_lounge_person_a 
+				}
+			}
+			100 = {
+				character:easteregg_mathilda_bjarnehed = {
+					save_scope_as = PDXCON_lounge_person_a 
+				}
+			}
+			
+			100 = {
+				character:easteregg_flavio_verna = {
+					save_scope_as = PDXCON_lounge_person_a 
+				}
+			}	
+
+			100 = {
+				character:easteregg_joacim_carlberg = {
+					save_scope_as = PDXCON_lounge_person_a 
+				}
+			}		
+
+			100 = {
+				character:easteregg_paul_depre = {
+					save_scope_as = PDXCON_lounge_person_a 
+				}
+			}	
+			
+			100 = {
+				character:easteregg_petter_lundh = {
+					save_scope_as = PDXCON_lounge_person_a 
+				}
+			}	
+
+			100 = {
+				character:easteregg_william_riggott = {
+					save_scope_as = PDXCON_lounge_person_a 
+				}
+			}	
+
+			100 = {
+				character:easteregg_artur_kacprzak = {
+					save_scope_as = PDXCON_lounge_person_a 
+				}
+			}	
+
+			100 = {
+				character:easteregg_anton_sorokin = {
+					save_scope_as = PDXCON_lounge_person_a 
+				}
+			}	
+			
+			100 = {
+				character:easteregg_malin_jonsson = {
+					save_scope_as = PDXCON_lounge_person_a 
+				}
+			}	
+
+			100 = {
+				character:easteregg_jonas_wickerstrom = {
+					save_scope_as = PDXCON_lounge_person_a 
+				}
+			}
+
+			100 = {
+				character:easteregg_patrick_mauffrey = {
+					save_scope_as = PDXCON_lounge_person_a 
+				}
+			}			
+			
+			100 = {
+				character:easteregg_jesse_henning = {
+					save_scope_as = PDXCON_lounge_person_a 
+				}
+			}	
+
+			100 = {
+				character:easteregg_hanna_lohman = {
+					save_scope_as = PDXCON_lounge_person_a 
+				}
+			}		
+
+			100 = {
+				character:easteregg_bartosz_byczynski = {
+					save_scope_as = PDXCON_lounge_person_a 
+				}
+			}	
+
+			100 = {
+				character:easteregg_peter_johannesson = {
+					save_scope_as = PDXCON_lounge_person_a 
+				}
+			}	
+
+			100 = {
+				character:easteregg_bianca_savazzi = {
+					save_scope_as = PDXCON_lounge_person_a 
+				}
+			}	
+
+			100 = {
+				character:easteregg_nils_wadensteni = {
+					save_scope_as = PDXCON_lounge_person_a 
+				}
+			}	
+
+			100 = {
+				character:easteregg_henrik_lohmander = {
+					save_scope_as = PDXCON_lounge_person_a 
+				}
+			}		
+
+			100 = {
+				character:easteregg_fawn_rowe = {
+					save_scope_as = PDXCON_lounge_person_a 
+				}
+			}
+
+			100 = {
+				character:easteregg_niall_bird = {
+					save_scope_as = PDXCON_lounge_person_a 
+				}
+			}	
+
+			100 = {
+				character:easteregg_max_collin = {
+					save_scope_as = PDXCON_lounge_person_a 
+				}
+			}		
+
+			100 = {
+				character:easteregg_wojciech_cywinski = {
+					save_scope_as = PDXCON_lounge_person_a 
+				}
+			}	
+
+			100 = {
+				character:easteregg_pontus_olofsson = {
+					save_scope_as = PDXCON_lounge_person_a 
+				}
+			}
+
+			100 = {
+				character:easteregg_sebastian_borg = {
+					save_scope_as = PDXCON_lounge_person_a 
+				}
+			}			
+			
+		}
+		
+		random_list = {
+			100 = {
+				character:easteregg_thomas_johansson = {
+					save_scope_as = PDXCON_lounge_person_b 
+				}
+			}
+			
+			100 = {
+				character:easteregg_lysann_schlegel = {
+					save_scope_as = PDXCON_lounge_person_b 
+				}
+			}	
+			
+			100 = {
+				character:easteregg_matthew_frary = {
+					save_scope_as = PDXCON_lounge_person_b 
+				}
+			}
+			
+			100 = {
+				character:easteregg_petter_vilberg = {
+					save_scope_as = PDXCON_lounge_person_b 
+				}
+			}
+
+			100 = {
+				character:easteregg_tobias_bodlund  = {
+					save_scope_as = PDXCON_lounge_person_b 
+				}
+			}
+			
+			100 = {
+				character:easteregg_pernilla_sparrhult  = {
+					save_scope_as = PDXCON_lounge_person_b 
+				}
+			}	
+			
+			100 = {
+				character:easteregg_linnea_thimren  = {
+					save_scope_as = PDXCON_lounge_person_b 
+				}
+			}
+			
+			100 = {
+				character:easteregg_milla_lankinen = {
+					save_scope_as = PDXCON_lounge_person_b 
+				}
+			}
+			
+			100 = {
+				character:easteregg_jakub_potapczyk = {
+					save_scope_as = PDXCON_lounge_person_b 
+				}
+			}	
+
+			100 = {
+				character:easteregg_ewan_cowhig_croft = {
+					save_scope_as = PDXCON_lounge_person_b 
+				}
+			}	
+			
+			100 = {
+				character:easteregg_david_horler = {
+					save_scope_as = PDXCON_lounge_person_b 
+				}
+			}
+			
+			100 = {
+				character:easteregg_debbie_lane = {
+					save_scope_as = PDXCON_lounge_person_b 
+				}
+			}	
+			
+			100 = {
+				character:easteregg_nicholas_meredith = {
+					save_scope_as = PDXCON_lounge_person_b 
+				}
+			}	
+
+			100 = {
+				character:easteregg_anna_johansson = {
+					save_scope_as = PDXCON_lounge_person_b 
+				}
+			}
+
+			100 = {
+				character:easteregg_anton_leirnes = {
+					save_scope_as = PDXCON_lounge_person_b 
+				}
+			}	
+
+			100 = {
+				character:easteregg_joel_hansson = {
+					save_scope_as = PDXCON_lounge_person_b 
+				}
+			}	
+
+			100 = {
+				character:easteregg_max_weltz = {
+					save_scope_as = PDXCON_lounge_person_b 
+				}
+			}
+
+			100 = {
+				character:easteregg_arthur_bialecki = {
+					save_scope_as = PDXCON_lounge_person_b 
+				}
+			}	
+
+			100 = {
+				character:easteregg_viktor_stadler = {
+					save_scope_as = PDXCON_lounge_person_b 
+				}
+			}	
+
+			100 = {
+				character:easteregg_rodrigue_delrue = {
+					save_scope_as = PDXCON_lounge_person_b 
+				}
+			}
+
+			100 = {
+				character:easteregg_daniel_moore = {
+					save_scope_as = PDXCON_lounge_person_b 
+				}
+			}	
+
+			100 = {
+				character:easteregg_joseph_gardener = {
+					save_scope_as = PDXCON_lounge_person_b 
+				}
+			}	
+
+			100 = {
+				character:easteregg_katya_boestad = {
+					save_scope_as = PDXCON_lounge_person_b 
+				}
+			}	
+
+			100 = {
+				character:easteregg_steacy_mcilwham = {
+					save_scope_as = PDXCON_lounge_person_b 
+				}
+			}	
+
+			100 = {
+				character:easteregg_andreas_olsson = {
+					save_scope_as = PDXCON_lounge_person_b 
+				}
+			}
+			
+			100 = {
+				character:easteregg_ismael_serrano = {
+					save_scope_as = PDXCON_lounge_person_b 
+				}
+			}	
+
+			100 = {
+				character:easteregg_lenaic_riedinger = {
+					save_scope_as = PDXCON_lounge_person_b 
+				}
+			}
+
+			100 = {
+				character:easteregg_christian_daflos = {
+					save_scope_as = PDXCON_lounge_person_b 
+				}
+			}
+
+			100 = {
+				character:easteregg_tegan_harris = {
+					save_scope_as = PDXCON_lounge_person_b 
+				}
+			}			
+
+			100 = {
+				character:easteregg_nikolaos_kaltsogiannis = {
+					save_scope_as = PDXCON_lounge_person_b 
+				}
+			}
+
+			100 = {
+				character:easteregg_karl_cederslat = {
+					save_scope_as = PDXCON_lounge_person_b 
+				}
+			}
+			
+			100 = {
+				character:easteregg_martin_anward = {
+					save_scope_as = PDXCON_lounge_person_b 
+				}
+			}			
+			
+			
+		}		
+
+	}	
+	
+	option = {
+		name = PDXCON.300.option.a
+		trigger = {
+			NOT = { has_character_modifier = PDXCON_paradox_modifier }
+		}
+		
+		add_character_modifier = {
+			modifier = PDXCON_paradox_modifier
+			months = 1
+		}
+		
+		add_secret = { 
+			type = secret_cannibal
+			target = root
+		}	
+		trigger_event = PDXCON.300
+	}
+
+	option = {
+		name = PDXCON.300.option.b
+		trigger_event = PDXCON.100
+	}	
+				
+}
+
+PDXCON.400 = {
+	type = character_event
+	title = PDXCON.400.t
+	theme = PDXCON_office
+
+	desc = {
+		desc = PDXCON.400.desc
+		first_valid = {
+			triggered_desc = {
+				trigger = {
+					root = {
+						NOT = { has_character_flag = PDXCON_400_pitched_majesty_3_flag }
+						NOT = { has_character_flag = PDXCON_400_pitched_sengoku_2_flag }
+					}
+				}
+				desc = PDXCON.400.desc.discussion
+			}
+			triggered_desc = {
+				trigger = {
+					root = { has_character_flag = PDXCON_400_pitched_sengoku_2_flag }
+				}
+				desc = PDXCON.400.discussion.consider_sengoku
+			}
+			desc = PDXCON.400.discussion.consider_majesty
+		}
+	}	
+
+	right_portrait = {
+	    character = scope:PDXCON_linda
+		animation = personality_bold
+	}
+
+	left_portrait = {
+		character = scope:PDXCON_fred
+		animation = personality_honorable
+	}
+
+	immediate = {
+		play_music_cue = "mx_cue_epic_sacral_moment"	
+		
+		character:easteregg_linda_tiger = {
+			save_scope_as = PDXCON_linda
+		}
+		
+		character:easteregg_fredrik_wester = {
+			save_scope_as = PDXCON_fred
+		}
+	
+	}	
+	
+	option = {
+		name = PDXCON.400.option.a
+		trigger = {
+			NOT = { has_faith = faith:PDXCON_paradoxism }
+			NOT = { has_character_flag = PDXCON_400_pitched_majesty_3_flag }
+		}
+		
+		scope:PDXCON_fred = {
+			add_opinion= {
+				target = root
+				modifier = PDXCON_liked_game_pitch_opinion
+			}
+		}
+			
+		set_character_faith = faith:PDXCON_paradoxism
+
+		add_secret = { 
+			type = secret_non_believer
+			target = root
+		}		
+		
+		add_character_flag = PDXCON_400_pitched_majesty_3_flag
+		
+		trigger_event = PDXCON.400
+	}
+
+	option = {
+		name = PDXCON.400.option.c
+		trigger = {
+			NOT = { has_faith = faith:PDXCON_paradoxism }
+			NOT = { has_character_flag = PDXCON_400_pitched_sengoku_2_flag }
+		}
+		set_character_faith = faith:PDXCON_paradoxism
+
+		add_secret = { 
+			type = secret_non_believer
+			target = root
+		}		
+		
+		add_character_flag = PDXCON_400_pitched_sengoku_2_flag
+		
+		trigger_event = PDXCON.400
+	}
+
+	option = {
+		name = PDXCON.400.option.b
+		trigger_event = PDXCON.100
+	}	
+				
+}
+
+PDXCON.500 = {
+	type = character_event
+	title = PDXCON.500.t
+	desc = PDXCON.500.desc
+	theme = PDXCON_map_room
+	
+	immediate = {
+		house = {
+			save_scope_as = PDXCON_house
+		}
+	}
+	
+	option = {
+		name = PDXCON.500.option.a
+		trigger = {
+			NOT = { has_character_flag = PDXCON_500_adopted_the_royal_platypus_skeleton_sigil }
+		}
+		scope:PDXCON_house = {
+			set_coa = dynasty:PDXCON_paradox_dynasty
+		}
+		add_character_flag = PDXCON_500_adopted_the_royal_platypus_skeleton_sigil
+		add_secret = { 
+			type = secret_incest
+			target = root
+		}		
+		trigger_event = PDXCON.500
+	}
+
+	option = {
+		name = PDXCON.500.option.b
+		trigger_event = PDXCON.100
+	}	
+				
+}
+
+PDXCON.600 = {
+	type = character_event
+	title = PDXCON.600.t
+	desc = PDXCON.600.desc
+	theme = PDXCON_hallway_staff
+	
+	option = {
+		name = PDXCON.600.option.a
+		trigger_event = PDXCON.700
+	}
+
+	option = {
+		name = PDXCON.600.option.b
+		trigger_event = PDXCON.800
+	}	
+			
+	option = {
+		name = PDXCON.600.option.c
+		trigger_event = PDXCON.900
+	}				
+
+	option = {
+		name = PDXCON.600.option.d
+		trigger_event = PDXCON.50
+	}		
+}
+
+
+PDXCON.700 = {
+	type = character_event
+	title = PDXCON.700.t
+	desc = PDXCON.700.desc
+	theme = PDXCON_speakeasy
+	
+	option = {
+		name = PDXCON.700.option.a
+		trigger_event = PDXCON.700
+	}
+
+	option = {
+		name = PDXCON.700.option.b
+		trigger_event = PDXCON.600
+	}			
+}
+
+
+PDXCON.800 = {
+	type = character_event
+	title = PDXCON.800.t
+	desc = PDXCON.800.desc
+	theme = PDXCON_music_studio
+	
+	option = {
+		name = PDXCON.800.option.a
+		trigger_event = PDXCON.800
+	}
+
+	option = {
+		name = PDXCON.800.option.b
+		trigger_event = PDXCON.600
+	}			
+}
+
+PDXCON.900 = {
+	type = character_event
+	title = PDXCON.900.t
+	desc = PDXCON.900.desc
+	theme = PDXCON_workspace
+	
+	option = {
+		name = PDXCON.900.option.a
+		trigger_event = PDXCON.900
+	}
+
+	option = {
+		name = PDXCON.900.option.b
+		trigger_event = PDXCON.600
+	}			
+}
+
+PDXCON.1000 = {
+	type = character_event
+	title = PDXCON.1000.t
+	desc = PDXCON.1000.desc
+	theme = PDXCON_lobby
+	
+	immediate = {
+		character:easteregg_troy_goodfellow = {
+			save_scope_as = PDXCON_hat_bringer
+		}		
+	}
+
+	option = {
+		name = PDXCON.1000.option.a
+	}			
+}
