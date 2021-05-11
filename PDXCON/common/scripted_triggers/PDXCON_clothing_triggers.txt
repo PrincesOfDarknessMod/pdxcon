@@ -1,0 +1,5 @@
+﻿PDXCON_crown_trigger = {
+	# set your condition there, e.g. culture check
+	# left empty for sparc to use in his PDXCON event
+	always = no
+}
