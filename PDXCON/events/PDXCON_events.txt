@@ -234,195 +234,195 @@ PDXCON.300 = {
 	immediate = {
 
 		random_list = {
-			100 = {
+			10 = {
 				character:easteregg_johan_andersson = {
 					save_scope_as = PDXCON_lounge_person_a 
 				}
 			}
 			
-			100 = {
+			10 = {
 				character:easteregg_charna_frostwhisper = {
 					save_scope_as = PDXCON_lounge_person_a 
 				}
 			}	
 
-			100 = {
+			10 = {
 				character:easteregg_magne_skjaeran = {
 					save_scope_as = PDXCON_lounge_person_a 
 				}
 			}	
 
-			100 = {
+			10 = {
 				character:easteregg_sean_hughes = {
 					save_scope_as = PDXCON_lounge_person_a 
 				}
 			}
 
-			100 = {
+			10 = {
 				character:easteregg_olof_bjork = {
 					save_scope_as = PDXCON_lounge_person_a 
 				}
 			}
-			100 = {
+			10 = {
 				character:easteregg_sara_wendel = {
 					save_scope_as = PDXCON_lounge_person_a 
 				}
 			}	
-			100 = {
+			10 = {
 				character:easteregg_matthew_clohessy = {
 					save_scope_as = PDXCON_lounge_person_a
 				}
 			}	
-			100 = {
+			10 = {
 				character:easteregg_maximilian_olbers = {
 					save_scope_as = PDXCON_lounge_person_a 
 				}
 			}			
 			
-			100 = {
+			10 = {
 				character:easteregg_emil_tisander  = {
 					save_scope_as = PDXCON_lounge_person_a 
 				}
 			}
-			100 = {
+			10 = {
 				character:easteregg_mathilda_bjarnehed = {
 					save_scope_as = PDXCON_lounge_person_a 
 				}
 			}
 			
-			100 = {
+			10 = {
 				character:easteregg_flavio_verna = {
 					save_scope_as = PDXCON_lounge_person_a 
 				}
 			}	
 
-			100 = {
+			10 = {
 				character:easteregg_joacim_carlberg = {
 					save_scope_as = PDXCON_lounge_person_a 
 				}
 			}		
 
-			100 = {
+			10 = {
 				character:easteregg_paul_depre = {
 					save_scope_as = PDXCON_lounge_person_a 
 				}
 			}	
 			
-			100 = {
+			10 = {
 				character:easteregg_petter_lundh = {
 					save_scope_as = PDXCON_lounge_person_a 
 				}
 			}	
 
-			100 = {
+			10 = {
 				character:easteregg_william_riggott = {
 					save_scope_as = PDXCON_lounge_person_a 
 				}
 			}	
 
-			100 = {
+			10 = {
 				character:easteregg_artur_kacprzak = {
 					save_scope_as = PDXCON_lounge_person_a 
 				}
 			}	
 
-			100 = {
+			10 = {
 				character:easteregg_anton_sorokin = {
 					save_scope_as = PDXCON_lounge_person_a 
 				}
 			}	
 			
-			100 = {
+			10 = {
 				character:easteregg_malin_jonsson = {
 					save_scope_as = PDXCON_lounge_person_a 
 				}
 			}	
 
-			100 = {
+			10 = {
 				character:easteregg_jonas_wickerstrom = {
 					save_scope_as = PDXCON_lounge_person_a 
 				}
 			}
 
-			100 = {
+			10 = {
 				character:easteregg_patrick_mauffrey = {
 					save_scope_as = PDXCON_lounge_person_a 
 				}
 			}			
 			
-			100 = {
+			10 = {
 				character:easteregg_jesse_henning = {
 					save_scope_as = PDXCON_lounge_person_a 
 				}
 			}	
 
-			100 = {
+			10 = {
 				character:easteregg_hanna_lohman = {
 					save_scope_as = PDXCON_lounge_person_a 
 				}
 			}		
 
-			100 = {
+			10 = {
 				character:easteregg_bartosz_byczynski = {
 					save_scope_as = PDXCON_lounge_person_a 
 				}
 			}	
 
-			100 = {
+			10 = {
 				character:easteregg_peter_johannesson = {
 					save_scope_as = PDXCON_lounge_person_a 
 				}
 			}	
 
-			100 = {
+			10 = {
 				character:easteregg_bianca_savazzi = {
 					save_scope_as = PDXCON_lounge_person_a 
 				}
 			}	
 
-			100 = {
+			10 = {
 				character:easteregg_nils_wadensteni = {
 					save_scope_as = PDXCON_lounge_person_a 
 				}
 			}	
 
-			100 = {
+			10 = {
 				character:easteregg_henrik_lohmander = {
 					save_scope_as = PDXCON_lounge_person_a 
 				}
 			}		
 
-			100 = {
+			10 = {
 				character:easteregg_fawn_rowe = {
 					save_scope_as = PDXCON_lounge_person_a 
 				}
 			}
 
-			100 = {
+			10 = {
 				character:easteregg_niall_bird = {
 					save_scope_as = PDXCON_lounge_person_a 
 				}
 			}	
 
-			100 = {
+			10 = {
 				character:easteregg_max_collin = {
 					save_scope_as = PDXCON_lounge_person_a 
 				}
 			}		
 
-			100 = {
+			10 = {
 				character:easteregg_wojciech_cywinski = {
 					save_scope_as = PDXCON_lounge_person_a 
 				}
 			}	
 
-			100 = {
+			10 = {
 				character:easteregg_pontus_olofsson = {
 					save_scope_as = PDXCON_lounge_person_a 
 				}
 			}
 
-			100 = {
+			10 = {
 				character:easteregg_sebastian_borg = {
 					save_scope_as = PDXCON_lounge_person_a 
 				}
@@ -431,193 +431,193 @@ PDXCON.300 = {
 		}
 		
 		random_list = {
-			100 = {
+			10 = {
 				character:easteregg_thomas_johansson = {
 					save_scope_as = PDXCON_lounge_person_b 
 				}
 			}
 			
-			100 = {
+			10 = {
 				character:easteregg_lysann_schlegel = {
 					save_scope_as = PDXCON_lounge_person_b 
 				}
 			}	
 			
-			100 = {
+			10 = {
 				character:easteregg_matthew_frary = {
 					save_scope_as = PDXCON_lounge_person_b 
 				}
 			}
 			
-			100 = {
+			10 = {
 				character:easteregg_petter_vilberg = {
 					save_scope_as = PDXCON_lounge_person_b 
 				}
 			}
 
-			100 = {
+			10 = {
 				character:easteregg_tobias_bodlund  = {
 					save_scope_as = PDXCON_lounge_person_b 
 				}
 			}
 			
-			100 = {
+			10 = {
 				character:easteregg_pernilla_sparrhult  = {
 					save_scope_as = PDXCON_lounge_person_b 
 				}
 			}	
 			
-			100 = {
+			10 = {
 				character:easteregg_linnea_thimren  = {
 					save_scope_as = PDXCON_lounge_person_b 
 				}
 			}
 			
-			100 = {
+			10 = {
 				character:easteregg_milla_lankinen = {
 					save_scope_as = PDXCON_lounge_person_b 
 				}
 			}
 			
-			100 = {
+			10 = {
 				character:easteregg_jakub_potapczyk = {
 					save_scope_as = PDXCON_lounge_person_b 
 				}
 			}	
 
-			100 = {
+			10 = {
 				character:easteregg_ewan_cowhig_croft = {
 					save_scope_as = PDXCON_lounge_person_b 
 				}
 			}	
 			
-			100 = {
+			10 = {
 				character:easteregg_david_horler = {
 					save_scope_as = PDXCON_lounge_person_b 
 				}
 			}
 			
-			100 = {
+			10 = {
 				character:easteregg_debbie_lane = {
 					save_scope_as = PDXCON_lounge_person_b 
 				}
 			}	
 			
-			100 = {
+			10 = {
 				character:easteregg_nicholas_meredith = {
 					save_scope_as = PDXCON_lounge_person_b 
 				}
 			}	
 
-			100 = {
+			10 = {
 				character:easteregg_anna_johansson = {
 					save_scope_as = PDXCON_lounge_person_b 
 				}
 			}
 
-			100 = {
+			10 = {
 				character:easteregg_anton_leirnes = {
 					save_scope_as = PDXCON_lounge_person_b 
 				}
 			}	
 
-			100 = {
+			10 = {
 				character:easteregg_joel_hansson = {
 					save_scope_as = PDXCON_lounge_person_b 
 				}
 			}	
 
-			100 = {
+			10 = {
 				character:easteregg_max_weltz = {
 					save_scope_as = PDXCON_lounge_person_b 
 				}
 			}
 
-			100 = {
+			10 = {
 				character:easteregg_arthur_bialecki = {
 					save_scope_as = PDXCON_lounge_person_b 
 				}
 			}	
 
-			100 = {
+			10 = {
 				character:easteregg_viktor_stadler = {
 					save_scope_as = PDXCON_lounge_person_b 
 				}
 			}	
 
-			100 = {
+			10 = {
 				character:easteregg_rodrigue_delrue = {
 					save_scope_as = PDXCON_lounge_person_b 
 				}
 			}
 
-			100 = {
+			10 = {
 				character:easteregg_daniel_moore = {
 					save_scope_as = PDXCON_lounge_person_b 
 				}
 			}	
 
-			100 = {
+			10 = {
 				character:easteregg_joseph_gardener = {
 					save_scope_as = PDXCON_lounge_person_b 
 				}
 			}	
 
-			100 = {
+			10 = {
 				character:easteregg_katya_boestad = {
 					save_scope_as = PDXCON_lounge_person_b 
 				}
 			}	
 
-			100 = {
+			10 = {
 				character:easteregg_steacy_mcilwham = {
 					save_scope_as = PDXCON_lounge_person_b 
 				}
 			}	
 
-			100 = {
+			10 = {
 				character:easteregg_andreas_olsson = {
 					save_scope_as = PDXCON_lounge_person_b 
 				}
 			}
 			
-			100 = {
+			10 = {
 				character:easteregg_ismael_serrano = {
 					save_scope_as = PDXCON_lounge_person_b 
 				}
 			}	
 
-			100 = {
+			10 = {
 				character:easteregg_lenaic_riedinger = {
 					save_scope_as = PDXCON_lounge_person_b 
 				}
 			}
 
-			100 = {
+			10 = {
 				character:easteregg_christian_daflos = {
 					save_scope_as = PDXCON_lounge_person_b 
 				}
 			}
 
-			100 = {
+			10 = {
 				character:easteregg_tegan_harris = {
 					save_scope_as = PDXCON_lounge_person_b 
 				}
 			}			
 
-			100 = {
+			10 = {
 				character:easteregg_nikolaos_kaltsogiannis = {
 					save_scope_as = PDXCON_lounge_person_b 
 				}
 			}
 
-			100 = {
+			10 = {
 				character:easteregg_karl_cederslat = {
 					save_scope_as = PDXCON_lounge_person_b 
 				}
 			}
 			
-			100 = {
+			10 = {
 				character:easteregg_martin_anward = {
 					save_scope_as = PDXCON_lounge_person_b 
 				}
@@ -906,11 +906,23 @@ PDXCON.1000 = {
 	title = PDXCON.1000.t
 	desc = PDXCON.1000.desc
 	theme = PDXCON_lobby
+
+	left_portrait = {
+		character = root
+		animation = personality_honorable
+	}
+	
+	right_portrait = {
+		character = scope:PDXCON_hat_bringer
+		animation = personality_honorable
+	}
+
 	
 	immediate = {
 		character:easteregg_troy_goodfellow = {
 			save_scope_as = PDXCON_hat_bringer
-		}		
+		}
+		add_character_flag = PDXCON_wearing_paradox_crown_flag
 	}
 
 	option = {
