@@ -141,6 +141,26 @@ headgear = {
 				PDXCON_crown_trigger = yes
 			}
 	}
+	
+	PDXCON_sample_helmet = {
+
+		dna_modifiers = {
+			accessory = {
+				mode = add
+				gene = headgear
+				template = PDXCON_helmet
+				range = { 0 1 } # For the randomness to work correctly
+			}
+		}	
+		weight = {
+			base = 0
+			modifier = {
+				# set your conditions here
+				# add = 100 # will be 50% chance to spawn if another group has its conditions met and also has "100" value
+				add = 1000 # this will force when the conditions are met since the value is so high.
+				PDXCON_helmet_trigger = yes
+			}
+	}
 
 
 ## DDE HRE ##

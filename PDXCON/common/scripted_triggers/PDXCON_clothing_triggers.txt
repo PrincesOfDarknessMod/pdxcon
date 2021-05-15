@@ -4,3 +4,8 @@
 	#always = no
 	has_character_flag = PDXCON_wearing_paradox_crown_flag
 }
+PDXCON_helmet_trigger = {
+	# set your condition there, e.g. culture check
+	# left empty for sparc to use in his PDXCON event
+	always = no
+}

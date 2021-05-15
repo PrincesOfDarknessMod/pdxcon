@@ -9,6 +9,11 @@
 	
 	add_accessory_modifiers = {
 		gene = headgear
+		template = PDXCON_helmet
+	}
+	
+	add_accessory_modifiers = {
+		gene = headgear
 		template = no_headgear
 	}
 

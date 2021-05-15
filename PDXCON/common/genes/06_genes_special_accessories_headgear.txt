@@ -1108,6 +1108,18 @@ accessory_genes = {
 				
 			}
 		}
+		
+		PDXCON_helmet = {
+			index = 75
+			male = {
+				1 = male_headgear_secular_western_pdxcon_helmet_01
+				
+			}
+			female = {
+				1 = female_headgear_secular_western_pdxcon_helmet_01
+				
+			}
+		}
 
 	}
 
