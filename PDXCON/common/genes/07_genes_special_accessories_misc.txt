@@ -105,10 +105,10 @@ accessory_genes = {
 		chancellor_scrolls = {
 			index = 7
 			male = {
-				1 = portrait_prop_thompson_smg
+				1 = western_scroll_01
 			}
 			female = {
-				1 = portrait_prop_thompson_smg
+				1 = western_scroll_01
 			}
 			boy = male
 			girl = female
