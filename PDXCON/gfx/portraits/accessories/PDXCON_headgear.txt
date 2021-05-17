@@ -15,6 +15,3 @@ female_headgear_secular_western_pdxcon_helmet_01 = {
 	set_tags = "no_hair"
 	entity = { required_tags = ""			shared_pose_entity = head		entity = female_headgear_secular_western_pdxcon_helmet_01_entity 	 }		
 }
-portrait_prop_thompson_smg = {
-	entity = {	required_tags = ""        node = "bn_l_prop"		entity = "portrait_prop_thompson_smg_entity" }
-}

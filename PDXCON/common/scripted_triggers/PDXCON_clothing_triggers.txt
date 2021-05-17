@@ -1,11 +1,27 @@
 ﻿PDXCON_crown_trigger = {
 	# set your condition there, e.g. culture check
-	# left empty for sparc to use in his PDXCON event
 	#always = no
+	
 	has_character_flag = PDXCON_wearing_paradox_crown_flag
 }
+
 PDXCON_helmet_trigger = {
 	# set your condition there, e.g. culture check
-	# left empty for sparc to use in his PDXCON event
-	always = no
+	#always = no
+	
+	OR = {
+		has_character_flag = PDXCON_robot_helmet_flag
+		has_trait = PDXCON_synthetic
+	}
+}
+
+PDXCON_tommygun_trigger = {
+	# set your condition there, e.g. culture check
+	#always = no
+	
+	OR = {
+		has_character_modifier = PDXCON_has_tommygun_modifier
+		has_characer_flag = PDXCON_has_tommygun_flag
+	}
+
 }

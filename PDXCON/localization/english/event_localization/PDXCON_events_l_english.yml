@@ -88,4 +88,27 @@ PDXCON.1000.desc:0 "[PDXCON_hat_bringer.GetFirstName] brings you to the end of y
 PDXCON.1000.option.a:0 "We shall take our leave."
 PDXCON.1000.option.a.tt:0 "God Speed! Your Majesty"
 
+PDXCON.1100.t:0 "Synthetic Dawn Paradox"
+PDXCON.1100.desc:0 "As you step out onto the street in Stockholm, the air distorts in front of you. A portal opens before you revealing a vast, red desert. Out of the portal comes a figure clad in chain mail, wielding a golden tommy gun and a robotic head. \n\nWith a metallic voice, it declares, 'We have fought gamers like you across the multiverse. Now that you know the secrets that will allow you to alter the nature of our reality, you must be destroyed!'\n\n[PDXCON_hat_bringer.GetFirstName] comes charging out of Paradox's offices drawing a sword, 'My liege, run! I'll hold off this mechanical abomination!'"
+PDXCON.1100.option.a:0 "Help [PDXCON_hat_bringer.GetFirstName] fight the Synthetic"
+PDXCON.1100.option.a.desc:0 "We will not go quietly into the night"
+PDXCON.1100.option.b:0 "Flee, abandoning [PDXCON_hat_bringer.GetFirstName] to his fate."
+PDXCON.1100.option.a.success:0 "You win the fight"
+PDXCON.1100.option.a.failure:0 "You win the fight, but [PDXCON_hat_bringer.GetFirstName] is grievously wounded"
+
+PDXCON.1200.t.dead_synth:0 "Synthetic Dusted"
+PDXCON.1200.t.dead_troy:0 "R.I.P [PDXCON_hat_bringer.GetFirstName]"
+PDXCON.1200.desc.dead_troy:0 "[PDXCON_hat_bringer.GetFirstName] does not survive [PDXCON_hat_bringer.GetHerHis] battle with the synthetic assassin.  Rest in Peace Paradox Community Manager for Crusader Kings III, your sacrifice will not be forgotten!\n\n"
+PDXCON.1200.desc.victory:0 "Victorious over your metallic foe, you have percevered. As you return to the Paradox Interactive lobby, however, you see more of them coming from the sky in immense metal vessels larger than a city. The slaughter began as soon as they disembarked; unfeeling monsters covered entirely in armor and with no discernible flesh or blood exterminated all in their path. Every screen at Paradox Intearctive shows it happening around the world. The Synthetic invasion has begun."
+PDXCON.1200.desc.pewpew:0 "\n\nGripping the golden tommy gun from the destroyed robot, you swear vengenace for this attack."
+PDXCON.1200.option.a:0 "What are these creatures? What do they want?!"
+
+PDXCON.1300.t:0 "Synthetic Dawn III"
+PDXCON.1300.desc:0 "Around the world, temporal rifts have opened and hordes of synethics have come pouring out. They come from the deep space, the ruins of Earth's drone colony on Mars and from a parrallel Europa Universalis.\n\nAn emegency summit has been called by the gamer community. They have appointed you as Paradox Gamer Community Custodian. Additionally, Sweden, well known for its war mongering in the 20th and 21st centuries, has pledged their armed forces to your cause."
+PDXCON.1300.option.a:0 "Now we can get things done."
+PDXCON.1300.option.a.tt:0 "Time to get to work."
+
+PDXCON.1400.t:0 "Synthetic Dusk"
+PDXCON.1400.d:0 "The last of the Synthetics has been destroyed. Though much of the world now lies in ruin and countless people have lost their lives, the world is finally rid of them. Scavengers mill over their static husks searching for some clue as to how these murderous automatons were able to function and what drove them to invade our world. They find few answers. But perhaps some of the technology they left behind might be adapted to our own purposes."
+PDXCON.1600.option.a:0 "We will not go quietly into the night!"
 

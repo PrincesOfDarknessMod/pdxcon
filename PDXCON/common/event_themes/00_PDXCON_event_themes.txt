@@ -152,3 +152,18 @@ PDXCON_workspace = {
 		event_background = PDXCON_workspace
 	}	
 }
+
+# Paradox Mars
+
+PDXCON_mars = {
+	icon = {
+		reference = "gfx/interface/icons/event_types/type_martial.dds"
+	}
+	sound = {
+		reference = "event:/SFX/Events/Themes/sfx_event_theme_type_war"
+	}
+
+	background = {
+		event_background = PDXCON_mars
+	}	
+}

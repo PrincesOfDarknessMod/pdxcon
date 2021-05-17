@@ -1,0 +1,3 @@
+﻿portrait_prop_thompson_smg = {
+	entity = {	required_tags = ""        node = "bn_l_prop"		entity = "portrait_prop_thompson_smg_entity" }
+}

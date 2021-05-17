@@ -198,6 +198,18 @@ accessory_genes = {
 			boy = male
 			girl = female
 		}
+		
+		PDXCON_tommy_gun = {
+			index = 15
+			male = {
+				1 = portrait_prop_thompson_smg
+			}
+			female = {
+				1 = portrait_prop_thompson_smg
+			}
+			boy = male
+			girl = female
+		}		
 	}
 
 

@@ -1,0 +1,168 @@
+﻿###################################
+# PDXCON Animations  #
+###################################
+
+
+############################################################################################################################################################
+############################################################################################################################################################
+
+PDXCON_tommygun_wielder = {
+    male = { 
+    	default = { head = "council_spymaster" torso = "council_spymaster" }
+
+		PDXCON_tommy_gun_wielder_hunchbacked = {
+			animation = { head = "idle_entry" torso = "idle_entry" }
+
+			weight = {
+				base = 0
+
+				modifier = {
+					add = 110
+					has_trait = hunchbacked
+				}
+			}
+		}
+
+		PDXCON_tommy_gun_wielder_infant = {
+			animation = { head = "idle" torso = "idleInfant_entry" }
+
+			weight = {
+				base = 0
+
+				modifier = {
+					add = 100
+					age <= 5
+				}
+			}
+		}
+
+		PDXCON_tommy_gun_wielder_child = {
+			animation = { head = "idle_entry" torso = "idle_entry" }
+
+			weight = {
+				base = 0
+
+				modifier = {
+					add = 100
+					age <= 9
+
+				}
+			}
+		}
+
+		PDXCON_tommy_gun_wielder = {
+			animation = { head = "council_spymaster" torso = "council_spymaster" }
+
+			weight = {
+				base = 0
+
+				modifier = {
+					add = 100
+					AND = {
+						age >= 10
+						current_weight < 60
+						NOT = { has_trait = dwarf }            
+					}
+				}
+			}
+
+			portrait_modifier = {							
+				animations_props = PDXCON_tommy_gun_prop
+				animations = council_spymaster_decal
+			}
+		}
+
+		PDXCON_tommy_gun_wielder_fat = {
+			animation = { head = "council_spymaster" torso = "council_spymaster" }
+
+			weight = {
+				base = 0
+
+				modifier = {
+					add = 100
+					AND = {
+						age >= 10
+						current_weight > 60
+						NOT = { has_trait = dwarf }
+					}					
+				}
+			}
+
+			portrait_modifier = {							
+				animations_props = PDXCON_tommy_gun_prop
+				animations = council_spymaster_decal
+			}
+		}
+
+		PDXCON_tommy_gun_wielder_dwarf = {
+			animation = { head = "council_spymaster" torso = "council_spymasterFatDwarf" }
+
+			weight = {
+				base = 0
+
+				modifier = {
+					add = 100
+					AND = {
+						age >= 10
+						current_weight < 35
+						has_trait = dwarf
+						NOT = { has_trait = pregnant }              
+					}					
+				}
+			}
+
+			portrait_modifier = {							
+				animations_props = PDXCON_tommy_gun_prop
+				animations = council_spymaster_decal
+			}
+		}
+
+		PDXCON_tommy_gun_wielder_fat_dwarf = {
+			animation = { head = "council_spymaster" torso = "council_spymasterFatDwarf" }
+
+			weight = {
+				base = 0
+
+				modifier = {
+					add = 100
+					AND = {
+						age >= 10
+						current_weight > 35
+						has_trait = dwarf
+						NOT = { has_trait = pregnant }
+					}					
+				}
+			}
+
+			portrait_modifier = {							
+				animations_props = PDXCON_tommy_gun_prop
+				animations = council_spymaster_decal
+			}
+		}
+
+		PDXCON_tommy_gun_wielder_pregnant = {
+			animation = { head = "council_spymaster" torso = "council_spymasterFatDwarf" }
+
+			weight = {
+				base = 0
+
+				modifier = {
+					add = 100
+					AND = {
+						current_weight < 45
+						has_trait = pregnant
+						NOT = { has_trait = dwarf }
+					}					
+				}
+			}
+
+			portrait_modifier = {							
+				animations_props = PDXCON_tommy_gun_prop
+				animations = council_spymaster_decal
+			}
+		}
+
+    boy = male
+    female = male
+    girl = male
+}

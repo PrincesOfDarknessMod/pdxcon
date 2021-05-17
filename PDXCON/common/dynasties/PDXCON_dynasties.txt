@@ -5,3 +5,15 @@ PDXCON_paradox_dynasty = {
 	culture = "swedish"
 	motto = dynn_PDXCON_paradox_motto
 }
+
+PDXCON_synthetics_dynasty = {
+	name= "dynn_PDXCON_synthetics"
+	culture = "swedish"
+	motto = dynn_PDXCON_synthetics_motto
+}
+
+PDXCON_pruitt_dynasty = {
+	name= "dynn_PDXCON_pruitt"
+	culture = "swedish"
+	motto = dynn_PDXCON_pruitt_motto
+}

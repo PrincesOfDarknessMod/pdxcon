@@ -1098,7 +1098,7 @@ accessory_genes = {
 		}
 
 		PDXCON_crown = {
-			index = 75
+			index = 77
 			male = {
 				1 = male_headgear_secular_western_pdxcon_sample_01
 				
@@ -1110,7 +1110,7 @@ accessory_genes = {
 		}
 		
 		PDXCON_helmet = {
-			index = 75
+			index = 78
 			male = {
 				1 = male_headgear_secular_western_pdxcon_helmet_01
 				

@@ -1,4 +1,4 @@
-﻿pdxcon_paradoxism_religion = {
+﻿pdxcon_syntheticism_religion = {
 	family = rf_pagan
 
 	doctrine = pagan_hostility_doctrine
@@ -41,9 +41,7 @@
 	}
 
 	holy_order_names = {
-		{ name = holy_order_guardians_of_divinerealm }
-		{ name = holy_order_faithful_of_highgod }
-		{ name = holy_order_warriors_of_the_symbol }
+		{ name = holy_order_guardians_of_synthetics }
 	}
 
 	holy_order_maa = { horse_archers }
@@ -188,9 +186,9 @@
 	}	
 
 	faiths = {
-		pdxcon_paradoxism = {
-			color = { 0.6 0.0 0.0 }
-			reformed_icon = pdxcon_paradoxism
+	pdxcon_syntheticism = {
+			color = { 0.4 0.4 0.4 }
+			reformed_icon = pdxcon_syntheticism
 
 			doctrine = unreformed_faith_doctrine
 
@@ -202,7 +200,7 @@
 
 			#Generic pagan tenets
 			doctrine = tenet_warmonger
-			doctrine = tenet_ancestor_worship
+			doctrine = tenet_unrelenting_faith
 			doctrine = tenet_astrology
 		}
 	}

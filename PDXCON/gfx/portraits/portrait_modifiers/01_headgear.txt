@@ -129,7 +129,7 @@ headgear = {
 				mode = add
 				gene = headgear
 				template = PDXCON_crown
-				range = { 0 1 } # For the randomness to work correctly
+				value = 1 # For the randomness to work correctly
 			}
 		}	
 		weight = {
@@ -140,6 +140,7 @@ headgear = {
 				add = 1000 # this will force when the conditions are met since the value is so high.
 				PDXCON_crown_trigger = yes
 			}
+		}
 	}
 	
 	PDXCON_sample_helmet = {
@@ -149,7 +150,7 @@ headgear = {
 				mode = add
 				gene = headgear
 				template = PDXCON_helmet
-				range = { 0 1 } # For the randomness to work correctly
+				value = 1 # For the randomness to work correctly
 			}
 		}	
 		weight = {
@@ -160,6 +161,7 @@ headgear = {
 				add = 1000 # this will force when the conditions are met since the value is so high.
 				PDXCON_helmet_trigger = yes
 			}
+		}
 	}
 
 

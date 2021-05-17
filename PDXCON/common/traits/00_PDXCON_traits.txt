@@ -9,12 +9,18 @@ PDXCON_paradox = {
 		first_valid = {
 					
 			triggered_desc = {
-				trigger = { is_female = yes }
+				trigger = {
+					exists = this
+					is_female = yes 
+				}
 				desc = trait_PDXCON_paradox_desc_she
 			}
 			
 			triggered_desc = {
-				trigger = { female = yes }
+				trigger = {
+					is_female = no
+					exists = this
+				}
 				desc = trait_PDXCON_paradox_desc_he
 			}	
 			
@@ -25,4 +31,38 @@ PDXCON_paradox = {
 	martial = 2
 
 	shown_in_ruler_designer = no
+	
+	opposites = {
+		PDXCON_synthetic
+	}
+	
+	opposite_opinion = -100	
+	
+}
+
+PDXCON_synthetic = {
+	index = 284
+	
+	icon = trait_PDXCON_synthetic.dds
+	name = trait_PDXCON_synthetic
+	
+	desc = trait_PDXCON_synthetic_desc_they
+	
+	opposites = {
+		PDXCON_paradox
+	}
+	
+	opposite_opinion = -100
+	
+	immortal = yes
+	prowess = 10
+	health = 10
+	diplomacy = -5		
+	learning = 1
+	martial = 1
+	stewardship = 1
+	intrigue = 1
+
+	shown_in_ruler_designer = yes
+	ruler_designer_cost = 200
 }

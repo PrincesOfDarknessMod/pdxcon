@@ -1,0 +1,83 @@
+﻿
+easteregg_troy_pruitt = { #Community Manager
+	name = "Troy"
+	dynasty = PDXCON_pruitt_dynasty # pruitt
+	#dna = easteregg_troy_pruitt
+	religion = catholic
+	culture = welsh
+	female = no
+	#dna = 
+	
+	#Skills
+	diplomacy = 15
+	martial = 3
+	stewardship = 7
+	intrigue = 5
+	learning = 7
+
+	#Education
+	trait = education_diplomacy_4
+
+	#Personality Traits
+	trait = gregarious
+	trait = diligent
+	trait = compassionate
+	
+	#Other Traits
+	trait = diplomat
+	
+	disallow_random_traits = yes
+	
+	1026.1.1 = {
+		birth = yes
+		#add_character_flag = has_scripted_appearance
+		#add_character_flag = no_headgear
+		#add_character_flag = has_scripted_weight		
+	}
+	1066.9.15 = {
+		employer = 6180 # Wales
+	}
+	1066.9.16 = {
+		death = yes
+	}
+}
+
+synthetic_leader = {
+	name = "XT-489_Eliminator"
+	dynasty = PDXCON_synthetics_dynasty # Synthetics
+	religion = PDXCON_syntheticism
+	culture = swedish
+	female = yes
+	#dna = 
+	
+	#Skills
+	diplomacy = 10
+	martial = 10
+	stewardship = 10
+	intrigue = 20
+	learning = 10
+
+	#Education
+	trait = education_martial_4
+
+	#Personality Traits
+	trait = cynical
+	trait = diligent
+	trait = callous
+	
+	#Other Traits
+	trait = strategist
+	
+	disallow_random_traits = yes
+	
+	1026.1.1 = {
+		birth = yes
+	}
+	1066.9.15 = {
+		#employer = 6180 # Wales
+		add_trait = PDXCON_synthetic
+	}
+	1066.9.16 = {
+		death = yes
+	}	
+}

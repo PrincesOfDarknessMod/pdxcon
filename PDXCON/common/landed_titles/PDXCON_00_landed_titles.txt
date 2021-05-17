@@ -1,0 +1,15 @@
+﻿@correct_culture_primary_score = 100
+@better_than_the_alternatives_score = 50
+@always_primary_score = 1000
+
+e_contingency = {
+	color = { 100 100 100 }
+	color2= { 100 100 100 }
+	capital = c_middlesex
+	definite_form = yes
+	no_automatic_claims = yes 
+	
+	ai_primary_priority = {
+		add = @always_primary_score
+	}
+}

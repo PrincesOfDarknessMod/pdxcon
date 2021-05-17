@@ -27,7 +27,7 @@ PDXCON.50 = {
 			
 			PDXCON_populate_CK3_staff_list_effect = yes
 			
-			character:easteregg_troy_goodfellow = {
+			character:easteregg_troy_pruitt = {
 				save_scope_as = PDXCON_lobby_person
 			}	
 		}
@@ -706,7 +706,7 @@ PDXCON.400 = {
 	option = {
 		name = PDXCON.400.option.a
 		trigger = {
-			NOT = { has_faith = faith:PDXCON_paradoxism }
+			NOT = { has_faith = faith:pdxcon_paradoxism }
 			NOT = { has_character_flag = PDXCON_400_pitched_majesty_3_flag }
 		}
 		
@@ -717,7 +717,7 @@ PDXCON.400 = {
 			}
 		}
 			
-		set_character_faith = faith:PDXCON_paradoxism
+		set_character_faith = faith:pdxcon_paradoxism
 
 		add_secret = { 
 			type = secret_non_believer
@@ -732,10 +732,10 @@ PDXCON.400 = {
 	option = {
 		name = PDXCON.400.option.c
 		trigger = {
-			NOT = { has_faith = faith:PDXCON_paradoxism }
+			NOT = { has_faith = faith:pdxcon_paradoxism }
 			NOT = { has_character_flag = PDXCON_400_pitched_sengoku_2_flag }
 		}
-		set_character_faith = faith:PDXCON_paradoxism
+		set_character_faith = faith:pdxcon_paradoxism
 
 		add_secret = { 
 			type = secret_non_believer
@@ -919,7 +919,7 @@ PDXCON.1000 = {
 
 	
 	immediate = {
-		character:easteregg_troy_goodfellow = {
+		character:easteregg_troy_pruitt = {
 			save_scope_as = PDXCON_hat_bringer
 		}
 		add_character_flag = PDXCON_wearing_paradox_crown_flag
@@ -927,5 +927,458 @@ PDXCON.1000 = {
 
 	option = {
 		name = PDXCON.1000.option.a
+		trigger_event = PDXCON.1100
+	}			
+}
+
+PDXCON.1100 = {
+	type = character_event
+	title = PDXCON.1100.t
+	desc = PDXCON.1100.desc
+	theme = PDXCON_mars
+
+	left_portrait = {
+		character = scope:PDXCON_synthetic_assassin
+		animation = PDXCON_tommygun_wielder
+	}
+	
+	lower_right_portrait = {
+		character = scope:PDXCON_hat_bringer
+		animation = marshall
+	}
+
+
+
+	immediate = {
+		hidden_effect = {
+			character:synthetic_leader = {
+				save_scope_as = PDXCON_synth_leader
+			}
+		
+			create_character = {
+				name = "HK-74"
+				location = root.capital_province
+				save_scope_as = PDXCON_synthetic_assassin
+				culture = capital_province.culture
+				faith = faith:pdxcon_syntheticism
+				gender = male
+				mother = scope:PDXCON_synth_leader
+				dynasty_house = scope:PDXCON_synth_leader.house
+				age = {18 1000}
+				diplomacy = { 2 8 }
+				martial = { 3 4 }
+				stewardship = { 1 5 }
+				intrigue = { 1 3 }
+				learning = { 1 5 }
+				prowess = { 5 7 }	
+				trait = cynical
+				trait = callous
+				trait = diligent
+				trait = education_intrigue_4
+				trait = PDXCON_synthetic
+			}
+					
+			scope:PDXCON_synthetic_assassin = {
+				add_trait = PDXCON_synthetic
+				add_character_modifier = {
+					modifier = PDXCON_has_tommygun_modifier
+				}
+			}		
+		}
+	}
+
+	option = {
+		name = PDXCON.1100.option.a
+
+		duel = {
+			skill = prowess
+			value = scope:PDXCON_synthetic_assassin.prowess
+			desc = PDXCON.1100.option.a.desc
+			
+			50 = {
+				desc = PDXCON.1100.option.a.success
+
+				compare_modifier = {
+					value = scope:duel_value
+					multiplier = high_positive_duel_skill_multiplier
+				}
+				scope:PDXCON_synthetic_assassin = {
+					death = {
+						death_reason = death_duel
+					}
+				}				
+				hidden_effect = {	
+					save_scope_value_as = {
+						name = PDXCON_synth_fight
+						value = flag:player_won
+					}
+				}	
+			}
+			
+			50 = {
+				desc = PDXCON.1100.option.a.failure
+
+				compare_modifier = {
+					value = scope:duel_value
+					multiplier = low_negative_duel_skill_multiplier 
+				}
+
+				hidden_effect = {
+					save_scope_value_as = {
+						name = PDXCON_synth_fight
+						value = flag:troy_killed
+					}	
+				}
+				
+				scope:PDXCON_hat_bringer = {
+					death = {
+						death_reason = death_duel
+					}
+				}
+				scope:PDXCON_synthetic_assassin = {
+					death = {
+						death_reason = death_duel
+					}
+				}				
+			}			
+		}
+		trigger_event = {
+			id = PDXCON.1200
+		}		
+	}		
+
+	option = {
+		name = PDXCON.1100.option.b
+		random_list = {
+			99 = { 
+				scope:PDXCON_hat_bringer = {
+					death = {
+						death_reason = death_duel
+					}
+				}
+				save_scope_value_as = {
+					name = PDXCON_synth_fight
+					value = flag:troy_killed
+				}
+			}
+			1 = { 
+				scope:PDXCON_synthetic_assassin = {
+					death = {
+						death_reason = death_duel
+					}
+				}
+				save_scope_value_as = {
+					name = PDXCON_synth_fight
+					value = flag:troy_won
+				}
+			}
+		}
+		trigger_event = {
+			id = PDXCON.1200
+		}	
+	}		
+}
+
+PDXCON.1200 = {
+	type = character_event
+	title = {
+		first_valid = {
+			triggered_desc = {
+				trigger = {
+					scope:PDXCON_synth_fight = flag:troy_killed
+				}
+				desc = PDXCON.1200.t.dead_troy
+			}
+			desc = PDXCON.1200.t.dead_synth
+		}
+	}
+
+	desc = {
+		triggered_desc = {
+			trigger = {
+				scope:PDXCON_synth_fight = flag:troy_killed
+			}
+			desc = PDXCON.1200.desc.dead_troy
+		}
+		desc = PDXCON.1200.desc.victory
+		desc = PDXCON.1200.desc.pewpew
+	}
+	theme = PDXCON_lobby
+
+	left_portrait = {
+		character = root
+		animation = PDXCON_tommygun_wielder
+	}
+
+	immediate = {
+		hidden_effect = {
+			add_character_modifier = {
+				modifier = PDXCON_has_tommygun_modifier
+			}
+			set_global_variable = {
+				name = PDXCON_1200_happened
+				value = yes
+			}
+		}
+	}
+	
+	option = {
+		name = PDXCON.1200.option.a
+		trigger_event = PDXCON.1300
+	}	
+}
+	
+PDXCON.1300 = {
+	type = character_event
+	title = PDXCON.1300.t
+	desc = PDXCON.1300.desc
+	theme = PDXCON_theater
+
+	left_portrait = {
+		character = root
+		animation = PDXCON_tommygun_wielder
+	}
+	
+	right_portrait = {
+		character = scope:PDXCON_fred
+		animation = personality_honorable
+	}	
+
+	lower_left_portrait = {
+		character = scope:PDXCON_supporter_person_a
+		animation = personality_honorable
+	}
+
+	lower_center_portrait = {
+		character = scope:PDXCON_supporter_person_b
+		animation = personality_honorable
+	}
+	
+	lower_right_portrait = {
+		character = scope:PDXCON_supporter_person_c
+		animation = personality_honorable
+	}	
+	
+	immediate = {
+
+		character:easteregg_fredrik_wester = {
+			save_scope_as = PDXCON_fred
+		}
+
+		random_in_list = {
+			list = PDXCON_CK3_staff_list
+			limit = { 
+				is_available = yes	
+				OR = {
+					NOT = { this = scope:PDXCON_supporter_person_b }
+					NOT = { this = scope:PDXCON_supporter_person_c }
+					NOT = { this = scope:PDXCON_fred }
+				}
+			}
+			save_scope_as = PDXCON_supporter_person_a
+		}
+
+		random_in_list = { 
+			list = PDXCON_CK3_staff_list
+			limit = {
+				is_available = yes	
+				OR = {
+					NOT = { this = scope:PDXCON_supporter_person_a }
+					NOT = { this = scope:PDXCON_supporter_person_c }
+					NOT = { this = scope:PDXCON_fred }
+				}
+			}
+			save_scope_as = PDXCON_supporter_person_b
+		}
+
+		random_in_list = { 
+			list = PDXCON_CK3_staff_list
+			limit = {
+				is_available = yes		
+				OR = {
+					NOT = { this = scope:PDXCON_supporter_person_a }
+					NOT = { this = scope:PDXCON_supporter_person_c }
+					NOT = { this = scope:PDXCON_fred }
+				}
+			}
+			save_scope_as = PDXCON_supporter_person_c
+		}
+
+		create_title_and_vassal_change = {
+			type = created
+			save_scope_as = change
+			add_claim_on_loss = no
+		}
+		
+		title:k_sweden = {
+			change_title_holder = {
+				holder = root
+				change = scope:change
+			}
+		}
+		
+		title:d_svealand = {
+			change_title_holder = {
+				holder = root
+				change = scope:change
+			}
+		} 
+		
+		title:c_upland = {
+			change_title_holder = {
+				holder = root
+				change = scope:change
+				take_baronies = yes
+			}
+		}
+		
+		title:c_sodermannaland = {
+			change_title_holder = {
+				holder = root
+				change = scope:change
+				take_baronies = yes
+			}
+		}	
+		
+		title:c_dalarna = {
+			change_title_holder = {
+				holder = root
+				change = scope:change
+				take_baronies = yes
+			}
+		}	
+		
+		title:c_vastmanland = {
+			change_title_holder = {
+				holder = root
+				change = scope:change
+				take_baronies = yes
+			}
+		}	
+
+		title:c_dalabergslagen= {
+			change_title_holder = {
+				holder = root
+				change = scope:change
+				take_baronies = yes
+			}
+		}	
+		
+		resolve_title_and_vassal_change = scope:change
+
+		spawn_army = {
+			uses_supply = yes
+			inheritable = no
+			name = gamer_defense_force_event_troops
+			levies = {
+				value = 1000
+			}		
+			location = title:c_upland.capital_province
+		}
+		
+		spawn_army = {
+			uses_supply = yes
+			inheritable = no
+			name = swedish_armed_forces_event_troops
+			levies = {
+				value = 50000
+			}
+			men_at_arms = {
+				type = bondi
+				stacks = 3
+			}
+			men_at_arms = {
+				type = vigmen
+				stacks = 2
+			}
+			
+			location = title:c_upland.title_province
+		}		
+		
+		hidden_effect = {
+			create_title_and_vassal_change = {
+				type = created
+				save_scope_as = change_synth
+				add_claim_on_loss = no
+			}
+			
+			title:e_contingency = {
+				change_title_holder = {
+					holder = scope:PDXCON_synth_leader
+					change = scope:change_synth
+				}
+			}	
+			
+			title:c_middlesex = {
+				change_title_holder = {
+					holder = scope:PDXCON_synth_leader
+					change = scope:change_synth
+					take_baronies = yes
+				}
+			}
+			
+			resolve_title_and_vassal_change = scope:change_synth
+		}
+		
+		scope:PDXCON_synth_leader = { 
+
+			spawn_army = {
+				uses_supply = yes
+				inheritable = no
+				name = sterlization_army_03_event_troops
+				levies = {
+					value = 50000
+				}
+				men_at_arms = {
+					type = bombard
+					stacks = 1
+				}
+				men_at_arms = {
+					type = house_guard
+					stacks = 1
+				}				
+				location = title:c_middlesex.title_province
+			}
+			spawn_army = {
+				uses_supply = yes
+				inheritable = no
+				name = sterlization_army_02_event_troops
+				levies = {
+					value = 50000
+				}
+				men_at_arms = {
+					type = bombard
+					stacks = 1
+				}
+				men_at_arms = {
+					type = house_guard
+					stacks = 1
+				}				
+				location = title:c_middlesex.title_province
+			}
+			spawn_army = {
+				uses_supply = yes
+				inheritable = no
+				name = sterlization_army_01_event_troops
+				levies = {
+					value = 50000
+				}
+				men_at_arms = {
+					type = bombard
+					stacks = 1
+				}
+				men_at_arms = {
+					type = house_guard
+					stacks = 1
+				}				
+				location = title:c_middlesex.title_province
+			}			
+			
+		}
+		
+	}
+
+	option = {
+		name = PDXCON.1300.option.a
 	}			
 }

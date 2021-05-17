@@ -2,3 +2,8 @@
 	icon = PDXCON_paradox_positive
 	intrigue = 2
 }
+
+PDXCON_has_tommygun_modifier = {
+	icon = martial_positive
+	prowess = 5
+}

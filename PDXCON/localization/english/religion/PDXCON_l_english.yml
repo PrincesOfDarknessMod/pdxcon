@@ -1,17 +1,17 @@
 ﻿l_english: 
 
  #Paradoxism Localization
- PDXCON_paradoxism_religion:0 "Paradoxism"
- PDXCON_paradoxism_religion_adj:0 "Paradoxian"
- PDXCON_paradoxism_religion_adjerent:0 "Paradoxian"
- PDXCON_paradoxism_religion_adherent_plural:0 "Paradoxians"
- PDXCON_paradoxism_religion_desc:0 "The belief that Paradox will continue to make great Grand Strategy Games"
+ pdxcon_paradoxism_religion:0 "Paradoxism"
+ pdxcon_paradoxism_religion_adj:0 "Paradoxian"
+ pdxcon_paradoxism_religion_adjerent:0 "Paradoxian"
+ pdxcon_paradoxism_religion_adherent_plural:0 "Paradoxians"
+ pdxcon_paradoxism_religion_desc:0 "The belief that Paradox will continue to make great Grand Strategy Games"
 
  #Paradoxism Faiths
- PDXCON_paradoxism:0 "Paradoxism"
- PDXCON_paradoxism_adj:0 "Paradoxian"
- PDXCON_paradoxism_adjerent:0 "Paradoxian"
- PDXCON_paradoxism_adherent_plural:0 "Paradoxians"
- PDXCON_paradoxism_desc:0 "The belief that Paradox will continue to make great Grand Strategy Games"
+ pdxcon_paradoxism:0 "Paradoxism"
+ pdxcon_paradoxism_adj:0 "Paradoxian"
+ pdxcon_paradoxism_adjerent:0 "Paradoxian"
+ pdxcon_paradoxism_adherent_plural:0 "Paradoxians"
+ pdxcon_paradoxism_desc:0 "The belief that Paradox will continue to make great Grand Strategy Games"
 
  
