@@ -19,7 +19,7 @@ PDXCON.50 = {
 	}
 	
 	immediate = {
-	
+		
 		if = {
 			limit = {
 				NOT = { has_character_flag = had_PDXCON_50_met_troy_flag }
@@ -38,6 +38,7 @@ PDXCON.50 = {
 			}
 			ROOT = {
 				save_scope_as = PDXCON_lobby_person
+				add_stress = minor_stress_gain
 			}
 		}		
 	}
@@ -820,7 +821,19 @@ PDXCON.600 = {
 PDXCON.700 = {
 	type = character_event
 	title = PDXCON.700.t
-	desc = PDXCON.700.desc
+	desc = {
+		desc = PDXCON.700.desc
+		triggered_desc = {
+			trigger = {
+				root = {
+					has_trait = drunkard
+					has_character_modifier = PDXCON_drunk_modifier
+				}
+			}
+			desc = PDXCON.700.desc.cutoff
+		}		
+	
+	}
 	theme = PDXCON_speakeasy
 	
 	left_portrait = {
@@ -856,6 +869,54 @@ PDXCON.700 = {
 	
 	option = {
 		name = PDXCON.700.option.a
+		trigger = {
+			NOT = { has_trait = drunkard }
+			gold > 0
+		}
+		
+		add_stress = minor_stress_loss
+		root = { remove_short_term_gold = -1 }
+ 		
+		if = {
+			limit = {
+				has_character_modifier = PDXCON_drunk_modifier
+				NOT = { has_trait = drunkard }
+			}
+			random = {
+				chance = 30
+				add_trait = drunkard
+			}
+		}
+
+		if = {
+			limit = {
+				has_character_modifier = PDXCON_tipsy_modifier
+				NOT = { has_character_modifier = PDXCON_drunk_modifier }
+			}
+			random = {
+				chance = 50
+				remove_character_modifier = PDXCON_tipsy_modifier
+				add_character_modifier = {
+					modifier = PDXCON_drunk_modifier
+					days = 7
+				}
+			}
+		}
+		
+		if = {
+			limit = {
+				NOT = { has_character_modifier = PDXCON_tipsy_modifier }
+				NOT = { has_character_modifier = PDXCON_drunk_modifier }
+			}
+			random = {
+				chance = 75
+				add_character_modifier = {
+					modifier = PDXCON_tipsy_modifier
+					days = 7
+				}
+			}
+		}
+		
 		trigger_event = PDXCON.700
 	}
 
@@ -874,6 +935,20 @@ PDXCON.800 = {
 	
 	option = {
 		name = PDXCON.800.option.a
+		trigger = {
+			NOT = { has_character_flag = PDXCON_800_took_lyrics_sheet }
+		}
+		add_character_flag = PDXCON_800_took_lyrics_sheet
+		add_diplomacy_skill = 1
+		if = {
+			limit = {
+				NOT = { has_trait = poet }
+			}
+			random = {
+				chance = 30
+				add_trait = poet
+			}
+		}
 		trigger_event = PDXCON.800
 	}
 
@@ -902,6 +977,11 @@ PDXCON.900 = {
 	
 	option = {
 		name = PDXCON.900.option.a
+		trigger = {
+			NOT = { has_character_flag = PDXCON_900_took_notes }
+		}
+		add_learning_skill = 1
+		add_character_flag = PDXCON_900_took_notes 
 		trigger_event = PDXCON.900
 	}
 
@@ -1554,5 +1634,12 @@ PDXCON.1300 = {
 	option = {
 		name = PDXCON.1300.option.a
 		add_prestige = 4000
-	}			
+	}
+
+	after = {
+			set_global_variable = {
+			name = variable_PDXCON_is_over
+			value = yes
+		}
+	}
 }

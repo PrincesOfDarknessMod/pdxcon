@@ -25,11 +25,6 @@ clothes = {
             	add = -1000
             	should_show_nudity = no
             }
-			modifier = {
-				add = 1000
-                exists = character:PDXCON_maledummy
-                this = character:PDXCON_maledummy
-			}
         }
     }
 
@@ -56,12 +51,7 @@ clothes = {
 		}
 		outfit_tags = { no_clothes }
 		weight = {
-			base = 0
-			modifier = {
-				add = 200
-                exists = character:PDXCON_maledummy
-                this = character:PDXCON_maledummy
-			}			
+			base = 0			
 			modifier = {
 				add = 110
 				should_show_nudity = no
@@ -117,6 +107,11 @@ clothes = {
 				add = 1100
 				has_character_modifier = vow_of_poverty_modifier
 			}
+			modifier = {
+				add = 500
+                exists = character:PDXCON_maledummy
+                this = character:PDXCON_maledummy
+			}			
             modifier = {
             	add = -50
 				portrait_mena_clothing_trigger = no

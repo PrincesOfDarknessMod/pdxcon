@@ -10,10 +10,10 @@ visit_PDXCON_decision = {
 
 	is_shown = {
 		is_ai = no
+		NOT = { has_global_variable = variable_PDXCON_is_over }
 	}
 
 	effect = {
-
 		trigger_event = PDXCON.50
 	
 	}

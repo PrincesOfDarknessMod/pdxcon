@@ -7,3 +7,17 @@ PDXCON_has_tommygun_modifier = {
 	icon = martial_positive
 	prowess = 5
 }
+
+PDXCON_tipsy_modifier = {
+	icon = drink_positive
+	diplomacy = 1
+	learning = -1
+	stress_loss_mult = 0.2
+}
+
+PDXCON_drunk_modifier = {
+	icon = drink_negative
+	learning = minor_skill_penalty
+	stewardship = minor_skill_penalty
+	health = -0.5
+}

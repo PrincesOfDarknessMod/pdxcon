@@ -288,11 +288,11 @@ hairstyles_scripted_characters = {
         }   
         weight = {
             base = 0
-			modifier = {
-				add = 1000
-                exists = character:PDXCON_maledummy
-                this = character:PDXCON_maledummy
-			}			
+#			modifier = {
+#				add = 1000
+#               exists = character:PDXCON_maledummy
+#               this = character:PDXCON_maledummy
+#			}			
         }
     }
 
