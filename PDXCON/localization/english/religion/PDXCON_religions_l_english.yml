@@ -14,4 +14,23 @@
  pdxcon_paradoxism_adherent_plural:0 "Paradoxians"
  pdxcon_paradoxism_desc:0 "The belief that Paradox will continue to make great Grand Strategy Games"
 
+ #Syntheticism Localization
+
+ pdxcon_syntheticism_religion:0 "Syntheticism"
+ pdxcon_syntheticism_religion_adj:0 "Synthetic"
+ pdxcon_syntheticism_religion_adjerent:0 "Synthetic"
+ pdxcon_syntheticism_religion_adherent_plural:0 "Synthetics"
+ pdxcon_syntheticism_religion_desc:0 "Syntheticism" 
+ 
+ #Syntheticism Faiths
+ 
+ pdxcon_syntheticism:0 "Syntheticism"
+ pdxcon_syntheticism_adj:0 "Synthetic"
+ pdxcon_syntheticism_adjerent:0 "Synthetic"
+ pdxcon_syntheticism_adherent_plural:0 "Synthetics"
+ pdxcon_syntheticism_desc:0 "Syntheticism"  
+ 
+
+    
+    
  

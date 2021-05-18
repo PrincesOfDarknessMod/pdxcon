@@ -31,7 +31,7 @@ PDXCON_populate_CK3_staff_list_effect = {
 	character:easteregg_charna_frostwhisper = {
 		add_to_list = PDXCON_CK3_staff_list
 	}
-	character:easteregg_lysann_schlegeler = {
+	character:easteregg_lysann_schlegel = {
 		add_to_list = PDXCON_CK3_staff_list
 	}
 	character:easteregg_sara_wendel = {

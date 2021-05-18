@@ -381,7 +381,7 @@ PDXCON.300 = {
 			}	
 
 			10 = {
-				character:easteregg_nils_wadensteni = {
+				character:easteregg_nils_wadensten = {
 					save_scope_as = PDXCON_lounge_person_a 
 				}
 			}	
@@ -612,7 +612,7 @@ PDXCON.300 = {
 			}
 
 			10 = {
-				character:easteregg_karl_cederslat = {
+				character:easteregg_karl_cederslatt = {
 					save_scope_as = PDXCON_lounge_person_b 
 				}
 			}
@@ -840,7 +840,6 @@ PDXCON.700 = {
 			list = PDXCON_CK3_staff_list
 			limit = { 
 				is_available = yes	
-				NOT = { this = scope:PDXCON_speakeasy_person_b }
 			}
 			save_scope_as = PDXCON_speakeasy_person_a
 		}
@@ -889,6 +888,17 @@ PDXCON.900 = {
 	title = PDXCON.900.t
 	desc = PDXCON.900.desc
 	theme = PDXCON_workspace
+	
+	right_portrait = {
+		character = scope:PDXCON_maledummy
+		animation = severely_injured
+	}
+	
+	immediate = {
+		character:PDXCON_maledummy = {
+			save_scope_as = PDXCON_maledummy
+		}
+	}
 	
 	option = {
 		name = PDXCON.900.option.a
@@ -958,13 +968,12 @@ PDXCON.1100 = {
 			create_character = {
 				name = "HK-74"
 				location = root.capital_province
-				save_scope_as = PDXCON_synthetic_assassin
 				culture = capital_province.culture
 				faith = faith:pdxcon_syntheticism
 				gender = male
 				mother = scope:PDXCON_synth_leader
 				dynasty_house = scope:PDXCON_synth_leader.house
-				age = {18 1000}
+				age = {18 900}
 				diplomacy = { 2 8 }
 				martial = { 3 4 }
 				stewardship = { 1 5 }
@@ -976,6 +985,7 @@ PDXCON.1100 = {
 				trait = diligent
 				trait = education_intrigue_4
 				trait = PDXCON_synthetic
+				save_scope_as = PDXCON_synthetic_assassin
 			}
 					
 			scope:PDXCON_synthetic_assassin = {
@@ -1124,6 +1134,7 @@ PDXCON.1200 = {
 	
 	option = {
 		name = PDXCON.1200.option.a
+		add_prestige = 1000
 		trigger_event = PDXCON.1300
 	}	
 }
@@ -1169,11 +1180,7 @@ PDXCON.1300 = {
 			list = PDXCON_CK3_staff_list
 			limit = { 
 				is_available = yes	
-				OR = {
-					NOT = { this = scope:PDXCON_supporter_person_b }
-					NOT = { this = scope:PDXCON_supporter_person_c }
-					NOT = { this = scope:PDXCON_fred }
-				}
+				NOT = { this = scope:PDXCON_fred }
 			}
 			save_scope_as = PDXCON_supporter_person_a
 		}
@@ -1184,7 +1191,6 @@ PDXCON.1300 = {
 				is_available = yes	
 				OR = {
 					NOT = { this = scope:PDXCON_supporter_person_a }
-					NOT = { this = scope:PDXCON_supporter_person_c }
 					NOT = { this = scope:PDXCON_fred }
 				}
 			}
@@ -1197,7 +1203,7 @@ PDXCON.1300 = {
 				is_available = yes		
 				OR = {
 					NOT = { this = scope:PDXCON_supporter_person_a }
-					NOT = { this = scope:PDXCON_supporter_person_c }
+					NOT = { this = scope:PDXCON_supporter_person_b }
 					NOT = { this = scope:PDXCON_fred }
 				}
 			}
@@ -1265,16 +1271,6 @@ PDXCON.1300 = {
 		}	
 		
 		resolve_title_and_vassal_change = scope:change
-
-		spawn_army = {
-			uses_supply = yes
-			inheritable = no
-			name = gamer_defense_force_event_troops
-			levies = {
-				value = 1000
-			}		
-			location = title:c_upland.capital_province
-		}
 		
 		spawn_army = {
 			uses_supply = yes
@@ -1295,7 +1291,8 @@ PDXCON.1300 = {
 			location = title:c_upland.title_province
 		}		
 		
-		hidden_effect = {
+		hidden_effect = {				
+		
 			create_title_and_vassal_change = {
 				type = created
 				save_scope_as = change_synth
@@ -1318,14 +1315,22 @@ PDXCON.1300 = {
 			}
 			
 			resolve_title_and_vassal_change = scope:change_synth
+			
+			scope:PDXCON_synth_leader = { 
+				add_pressed_claim = title:k_sweden
+				add_pressed_claim = title:k_england
+				add_pressed_claim = title:d_bedford
+				add_pressed_claim = title:d_svealand
+				add_pressed_claim = title:c_upland
+				add_prestige = 5000
+			}
 		}
 		
 		scope:PDXCON_synth_leader = { 
-
 			spawn_army = {
 				uses_supply = yes
 				inheritable = no
-				name = sterlization_army_03_event_troops
+				name = sterlization_army_01_event_troops
 				levies = {
 					value = 50000
 				}
@@ -1336,9 +1341,51 @@ PDXCON.1300 = {
 				men_at_arms = {
 					type = house_guard
 					stacks = 1
-				}				
+				}	
+				
 				location = title:c_middlesex.title_province
+			}			
+		}
+		
+		hidden_effect = {
+			create_character = {
+				name = "GAMAS_H3"
+				mother = scope:PDXCON_synth_leader
+				dynasty_house = scope:PDXCON_synth_leader.house
+				location = scope:PDXCON_synth_leader.capital_province
+				culture = scope:PDXCON_synth_leader.culture					
+				template = PDXCON_synthetic_template
+				save_scope_as = PDXCON_synthetic_sublord_a
 			}
+					
+			scope:PDXCON_synthetic_sublord_a = {
+				add_character_modifier = {
+					modifier = PDXCON_has_tommygun_modifier
+				}
+				set_immortal_age = 21
+					
+				create_title_and_vassal_change = {
+					type = created
+					save_scope_as = change_synth_a
+					add_claim_on_loss = no
+				}
+				
+				title:c_ile_de_france = {
+						change_title_holder = {
+							holder = scope:PDXCON_synthetic_sublord_a
+							change = scope:change_synth_a
+							take_baronies = yes
+						}
+					}
+				
+				resolve_title_and_vassal_change = scope:change_synth_a
+				add_pressed_claim = title:d_valois
+				add_pressed_claim = title:k_france
+				add_prestige = 1000	
+			}
+		}
+			
+		scope:PDXCON_synthetic_sublord_a = {
 			spawn_army = {
 				uses_supply = yes
 				inheritable = no
@@ -1354,12 +1401,53 @@ PDXCON.1300 = {
 					type = house_guard
 					stacks = 1
 				}				
-				location = title:c_middlesex.title_province
+				location = title:c_ile_de_france.title_province
+			}				
+		}	
+
+		hidden_effect = {
+			create_character = {
+				name = "AK_H_22"
+				mother = scope:PDXCON_synth_leader
+				dynasty_house = scope:PDXCON_synth_leader.house
+				location = scope:PDXCON_synth_leader.capital_province
+				culture = scope:PDXCON_synth_leader.culture				
+				template = PDXCON_synthetic_template
+				
+				save_scope_as = PDXCON_synthetic_sublord_b
 			}
+					
+			scope:PDXCON_synthetic_sublord_b = {
+				add_character_modifier = {
+					modifier = PDXCON_has_tommygun_modifier
+				}
+				set_immortal_age = 21
+				
+				create_title_and_vassal_change = {
+					type = created
+					save_scope_as = change_synth_b
+					add_claim_on_loss = no
+				}
+			
+				title:c_berlin = {
+					change_title_holder = {
+						holder = scope:PDXCON_synthetic_sublord_b
+						change = scope:change_synth_b
+						take_baronies = yes
+					}
+				}
+				
+				resolve_title_and_vassal_change = scope:change_synth_b
+				add_pressed_claim = title:d_ostmark
+				add_prestige = 1000	
+			}
+		}
+				
+		scope:PDXCON_synthetic_sublord_b = {
 			spawn_army = {
 				uses_supply = yes
 				inheritable = no
-				name = sterlization_army_01_event_troops
+				name = sterlization_army_03_event_troops
 				levies = {
 					value = 50000
 				}
@@ -1371,14 +1459,100 @@ PDXCON.1300 = {
 					type = house_guard
 					stacks = 1
 				}				
-				location = title:c_middlesex.title_province
-			}			
+				location = title:c_berlin.title_province
+			}				
+		}	
+		
+		hidden_effect = {
+			create_character = {
+				name = "PMB_3"
+				mother = scope:PDXCON_synth_leader
+				dynasty_house = scope:PDXCON_synth_leader.house
+				location = scope:PDXCON_synth_leader.capital_province
+				culture = scope:PDXCON_synth_leader.culture					
+				template = PDXCON_synthetic_template
+				save_scope_as = PDXCON_synthetic_sublord_c
+			}
+					
+			scope:PDXCON_synthetic_sublord_c = {
+				add_character_modifier = {
+					modifier = PDXCON_has_tommygun_modifier
+				}
+				set_immortal_age = 21
+				
+				create_title_and_vassal_change = {
+					type = created
+					save_scope_as = change_synth_c
+					add_claim_on_loss = no
+				}
 			
+				title:c_moskva = {
+					change_title_holder = {
+						holder = scope:PDXCON_synthetic_sublord_c
+						change = scope:change_synth_c
+						take_baronies = yes
+					}
+				}
+				
+				resolve_title_and_vassal_change = scope:change_synth_c
+				add_pressed_claim = title:d_opolye
+				add_pressed_claim = title:k_opolye
+				add_prestige = 1000	
+			}
+		}
+					
+			scope:PDXCON_synthetic_sublord_c = {		
+				spawn_army = {
+					uses_supply = yes
+					inheritable = no
+					name = sterlization_army_04_event_troops
+					levies = {
+						value = 50000
+					}
+					men_at_arms = {
+						type = bombard
+						stacks = 1
+					}
+					men_at_arms = {
+						type = house_guard
+						stacks = 1
+					}				
+					location = title:c_moskva.title_province
+				}				
+			}				
+
+		create_title_and_vassal_change = {
+			type = created
+			save_scope_as = change_synth_d
+			add_claim_on_loss = no
+		}
+
+		scope:PDXCON_synthetic_sublord_a = {
+			change_liege = {
+				liege = scope:PDXCON_synth_leader
+				change = scope:change_synth_d
+			}
+		}	
+
+		scope:PDXCON_synthetic_sublord_b = {
+			change_liege = {
+				liege = scope:PDXCON_synth_leader
+				change = scope:change_synth_d
+			}
+		}
+
+		scope:PDXCON_synthetic_sublord_c = {
+			change_liege = {
+				liege = scope:PDXCON_synth_leader
+				change = scope:change_synth_d
+			}
 		}
 		
+		resolve_title_and_vassal_change = scope:change_synth_d
 	}
 
 	option = {
 		name = PDXCON.1300.option.a
+		add_prestige = 4000
 	}			
 }

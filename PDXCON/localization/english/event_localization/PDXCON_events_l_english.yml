@@ -77,7 +77,7 @@ PDXCON.800.option.b:0 "Go back to the hallway."
 PDXCON.800.option.b.tt:0 "You will leave the music studio."
 
 PDXCON.900.t:0 "Paradox Workspace"
-PDXCON.900.desc:0 "I am at a Paradox Workspace. There are a lot of desks, chairs, PCs and monitors here.  On a white board is written: 'You can use different fonts and colors in localization!'\n\n#V An example:#  #of different fonts#. \n #F Lorem ipsum# #B dolor sit amet #, #C consectetur adipiscing elit#. #EMP Nulla nec ultrices felis.# Fusce libero massa, #N faucibus id semper id#, consectetur in lectus. #T Phasellus eget odio quis dolor egestas consequat.# Etiam sodales nisl ac enim sollicitudin, #X et pellentesque sem sagittis. #"
+PDXCON.900.desc:0 "I am at a Paradox Workspace. There are a lot of desks, chairs, PCs and monitors here. In the corner is a [PDXCON_maledummy.GetFirstName] that developers are using as a dart target.\n\nOn a white board is written: 'You can use different fonts and colors in localization!'\n\n#V An example:#  #of different fonts#. \n #F Lorem ipsum# #B dolor sit amet #, #C consectetur adipiscing elit#. #EMP Nulla nec ultrices felis.# Fusce libero massa, #N faucibus id semper id#, consectetur in lectus. #T Phasellus eget odio quis dolor egestas consequat.# Etiam sodales nisl ac enim sollicitudin, #X et pellentesque sem sagittis. #"
 PDXCON.900.option.a:0 "Take some notes to improve your modding."
 PDXCON.900.option.a.tt:0 ""
 PDXCON.900.option.b:0 "Go back to the hallway."

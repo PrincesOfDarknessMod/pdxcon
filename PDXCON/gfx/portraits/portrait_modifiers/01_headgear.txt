@@ -44,6 +44,11 @@ headgear = {
 				add = 110
 				has_character_modifier = fp1_abased_before_highgod_modifier
 			}
+			modifier = {
+				add = 200
+                exists = character:PDXCON_maledummy
+                this = character:PDXCON_maledummy
+			}	
 		}
 	}
 
@@ -2828,6 +2833,11 @@ headgear = {
 		}	
 		weight = {
 			base = 0
+            modifier = {
+                add = 200
+				exists = character:easteregg_troy_pruitt #troy
+				this = character:easteregg_troy_pruitt #troy
+            }				
 			modifier = {
 				add = 51 # Slightly higher
 				NAND = {

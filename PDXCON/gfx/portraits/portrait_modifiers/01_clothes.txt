@@ -25,6 +25,11 @@ clothes = {
             	add = -1000
             	should_show_nudity = no
             }
+			modifier = {
+				add = 1000
+                exists = character:PDXCON_maledummy
+                this = character:PDXCON_maledummy
+			}
         }
     }
 
@@ -52,6 +57,11 @@ clothes = {
 		outfit_tags = { no_clothes }
 		weight = {
 			base = 0
+			modifier = {
+				add = 200
+                exists = character:PDXCON_maledummy
+                this = character:PDXCON_maledummy
+			}			
 			modifier = {
 				add = 110
 				should_show_nudity = no
