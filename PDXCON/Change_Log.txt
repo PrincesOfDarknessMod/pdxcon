@@ -1,0 +1,18 @@
+# This is the Change Log for the PDXCON Tutorial Mod. 
+
+The larger the mod and the more changes are made, the more modders need to make one of these.
+
+# 1.0 May 23, 2021: Initial Release
+
+# 1.1 May 25, 2021: Tooltipapalooza
+	* Added tool tips to all events to explain how the events were scripted.
+	* Fixed issue with Thompson SMG not appearing with all portraits. It was a missing } .  Be wear the missing }, it plagues modders like nothing else.
+	* Diversified character portrait animations.
+	* Diversified event icons, themes and backgrounds.
+	* Added music cues.
+	* Expanded event chain to break up Gamer Custodian Event from Synthetic Dawn III Invasion event.
+	* Added Paradox Office buildings.
+	* Started a war.
+	* Fixed many typos in event text.
+	* Made a Faulkner joke.
+	* Added Change Log to show a best practice.
