@@ -16,3 +16,7 @@ The larger the mod and the more changes are made, the more modders need to make 
 	* Fixed many typos in event text.
 	* Made a Faulkner joke.
 	* Added Change Log to show a best practice.
+	
+# 1.2 May 26, 2021: Comments
+	* Added comments to events script
+	* Typo fixes for event localization

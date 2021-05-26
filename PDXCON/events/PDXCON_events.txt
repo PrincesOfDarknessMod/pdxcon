@@ -1,8 +1,43 @@
-﻿namespace = PDXCON
+﻿# Events for PDXCON
+
+	#50 - Paradox Interactive Lobby
+	#100 - Paradox Hall of Released Titles
+	#200 - Paradox Theater
+	#300 - Paradox Stellaris Lounge
+	#400 - Paradox Office
+	#500 - Paradox Map Room
+	#600 - Paradox Hall of Staff
+	#700 - Paradox Speakeasy
+	#800 - Paradox Music Studio
+	#900 - Paradox Workspace
+	#1000 - Leaving Paradox Interactive
+	#1100 - Synthetic Dawn Paradox
+	#1200 - Synthetic Dusted / R.I.P. Troy
+	#1300 - A Custodian Cleans Things Up!
+	#1400 - Synthetic Dawn III
+
+# Commenting code is a best practice, both for anyone who comes after you to look at the code and to remind yourself if you return to it.
+
+# By Stephen "Sparc" Arthur, Lead Developer for Princes of Darkness Mod
+
+namespace = PDXCON
+
+# Be sure to have a unique namespace at the top of your event file. For this event chain I use 'namespace=PDXCON'
+
+# The event script can be found at /events/PDXCON_events.txt \n\nLocalization for events can be anywhere under /localization/english/ , but I like to organize things into separate folders as much as possible. Since there is only one event chain in the mod I'm using /localization/english/events/PDXCON_events_l_english.yml
+
+# The suffix of '_l_english.yml' is very important. Failure to use this suffix will cause the localization to not be displayed. Save the file with UTF-8-BOM encoding.
+
+# It is also a best practice for modders to use a prefix for all their unique files to reduce conflicts if players combine mods.
+
+# First Event after Visit Paradox Decision
 
 PDXCON.50 = {
 	type = character_event
-	title = PDXCON.50.t
+	title = PDXCON.50.t  #Paradox Interactive Lobby
+	
+# This first event makes use of a 'triggered_desc' based on a trigger that checks if a character has a flag.
+	
 	desc = {
 		desc = PDXCON.50.desc
 		triggered_desc = {
@@ -17,6 +52,8 @@ PDXCON.50 = {
 		character = scope:PDXCON_lobby_person
 		animation = personality_honorable
 	}
+
+# In 'immediate' clause, there is also an 'if' statement that checks for a flag and changes the scope of which character appears in the lobby.
 	
 	immediate = {
 		
@@ -44,16 +81,22 @@ PDXCON.50 = {
 			}
 		}		
 	}
+
+# Go to Hall of Released Titles
 	
 	option = {
 		name = PDXCON.50.option.a
 		trigger_event = PDXCON.100
 	}
 
+# Go to Hall of Staff
+
 	option = {
 		name = PDXCON.50.option.b
 		trigger_event = PDXCON.600
 	}	
+
+# Leave Paradox Interactive
 
 	option = {
 		name = PDXCON.50.option.c
@@ -61,6 +104,9 @@ PDXCON.50 = {
 	}	
 	
 	after = {
+	
+# To add a tooltip, use the command 'custom_tooltip'. For example: custom_tooltip = PDXCON.50.after.tt 
+	
 		custom_tooltip = PDXCON.50.after.tt
 		if = { 
 			limit = {
@@ -74,25 +120,41 @@ PDXCON.50 = {
 
 
 PDXCON.100 = {
+
+# This is simplest sort of event. I have named it 'PDXCON.100'.  It is a best practice to leave gaps in your event numbering in case you want to come back later and insert an event into an existing sequence. You can name events whatever you like, but logical, intuitive event names makes it easier for someone else to understand your code and will help you remember when you revist it.
+
 	type = character_event
-	title = PDXCON.100.t
+	title = PDXCON.100.t #Paradox Hall of Released Titles
 	desc = PDXCON.100.desc
+
+# Events have themes. They can be found at /common/event_themes/00_PDXCON_event_themes.txt This sets the icon in the upper left, the sound effect with the event, and calls a background. Event backgrounds are found in /common/event_backgrounds/01_PDXCON_event_backgrounds.txt 
+
+# Event backgounds specify the ambience as well as the location of the background image file, in this case: /gfx/interface/illustrations/event_scenes/PDXCON_hallway_titles.dds"	
+	
 	theme = PDXCON_hallway_titles
+
+# Go to the theater
 	
 	option = {
 		name = PDXCON.100.option.a
 		trigger_event = PDXCON.200
 	}
 
+# Go to the lounge
+
 	option = {
 		name = PDXCON.100.option.b
 		trigger_event = PDXCON.300
 	}	
-			
+
+# Go to the office
+	
 	option = {
 		name = PDXCON.100.option.c	
 		trigger_event = PDXCON.400
 	}			
+
+# Go to the map room
 			
 	option = {
 		name = PDXCON.100.option.d
@@ -100,10 +162,14 @@ PDXCON.100 = {
 		trigger_event = PDXCON.500
 	}			
 
+# Return to the lobby
+
 	option = {
 		name = PDXCON.100.option.e
 		trigger_event = PDXCON.50
 	}	
+
+# I use the 'after' block here to provide the 'custom_tooltip'.  That way this tooltip is displayed no matter what option a player chooses.
 
 	after = {
 		custom_tooltip = PDXCON.100.after.tt
@@ -112,9 +178,12 @@ PDXCON.100 = {
 
 PDXCON.200 = {
 	type = character_event
-	title = PDXCON.200.t
+	title = PDXCON.200.t #Paradox Theater
 	desc = {
 		desc = PDXCON.200.desc
+
+# I used the 'first_valid' command here to use 'triggered_desc' to change the event description based on 'has_character_flag'. In this case, I allow the same event to be revisited and the description wil change based on the past option decision the player has chosen.		
+		
 		first_valid = {
 			triggered_desc = {
 				trigger = {
@@ -155,6 +224,8 @@ PDXCON.200 = {
 			save_scope_as = PDXCON_henrik
 		}
 	}	
+
+# Shut up and take my money
 	
 	option = {
 		name = PDXCON.200.option.a
@@ -163,14 +234,24 @@ PDXCON.200 = {
 			NOT = { has_character_flag = PDXCON_200_loved_flag }
 			NOT = { has_character_flag = PDXCON_200_hated_flag }
 		}
+
+# To remove gold from a character use the command 'remove_short_term_gold'. I reference 'minor_gold_value' which is a variable based on the rank of the character. Scripted values are not required to be used. You can define a numerical value like 'remove_short_term_gold = 30'
 		
 		remove_short_term_gold = minor_gold_value
+
+# To add a trait use the 'add_trait' command. I have defined the trait in /common/traits/00_PDXCON_traits.txt When adding a trait, be sure to increment the 'index' number by one. If two traits share an index number, the game will only use the values defined in one of them. The primary cause of conflict when combining mods is when two different mods use the same index number for a trait. Trait icons are located at /gfx/interface/icons/traits/ 
+
+# They are in a "dds" format.
 			
 		add_trait = PDXCON_paradox
+
+# To add martial lifestyle experience, use the command 'add_martial_lifestyle_xp'. I use a variable for the amount, 'miniscule_lifestyle_xp'. The amount of these values are defined in the base game at /common/script_values/00_lifestlye_values.txt
 		
 		add_martial_lifestyle_xp = miniscule_lifestyle_xp
 
 		add_character_flag = PDXCON_200_loved_flag
+
+# Both options here either remove or add stress to scoped characters. In both cases, the command to add or remove stress is 'add_stress'.  To add stress, use scripted value like 'medium_stress_gain'.  To remove stress, use a scripted value like 'minor_stress_loss'. These values are located in the base game at common/script_values/00_stress_values.txt
 
 		scope:PDXCON_alex = {
 			add_stress = minor_stress_loss
@@ -181,6 +262,8 @@ PDXCON.200 = {
 		}
 		trigger_event = PDXCON.200
 	}
+
+# This looks terrible
 
 	option = {
 		name = PDXCON.200.option.c
@@ -220,6 +303,8 @@ PDXCON.200 = {
 		trigger_event = PDXCON.200
 	}
 
+# Go back to the hallway
+
 	option = {
 		name = PDXCON.200.option.b
 		trigger_event = PDXCON.100
@@ -232,9 +317,16 @@ PDXCON.200 = {
 
 PDXCON.300 = {
 	type = character_event
-	title = PDXCON.300.t
+	title = PDXCON.300.t # Paradox Stellaris Lounge
 	desc = PDXCON.300.desc
 	theme = PDXCON_lounge
+	
+# This event uses two instances of the 'random_list' command to define scopes that change the characters displayed as 'left_portrait' and 'right_portrait'. I will show a more elegant way to do this in the Speakeasy event.
+
+# There is more than one way to do something. For example, there are two different localizations used to show names of characters having a conversation. The first, 'PDXCON_lounge_person_a.GetFullName', shows the full name of a character. The second is a combination of 'PDXCON_lounge_person_b.GetName' and 'PDXCON_lounge_person_b.GetHouse.GetName'. 
+
+# In both cases, the first name and house name is displayed, but the second variation when mousing over the house name shows the house in the tool tip rather than the character.
+	
 	left_portrait = {
 		character = scope:PDXCON_lounge_person_a
 		animation = personality_honorable
@@ -641,17 +733,27 @@ PDXCON.300 = {
 		}		
 
 	}	
+
+# By imbibing the reflection of the divine we grow closer to The Lord
 	
 	option = {
 		name = PDXCON.300.option.a
 		trigger = {
 			NOT = { has_character_modifier = PDXCON_paradox_modifier }
 		}
+
+# To add a character modifier, use the command 'add_character_modifier'. You can make it temporary by adding a time period like 'months = 1'. The modifier is defined in /common/modifers/00_PDXCON_modifiers.txt
+
+# The localization for PDXCON_paradox_modifier is 'Ate Paradox Green'. It is found at /localization/english/modifiers/PDXCON_modifiers_l_english.yml 
+
+# Icon graphics for modifiers is found at /gfx/interface/icons/modifiers/
 		
 		add_character_modifier = {
 			modifier = PDXCON_paradox_modifier
 			months = 1
 		}
+
+# To add a secret, the command is 'add_secret' with specifying the 'type' and the 'target'. In this case 'secret_cannibal' and 'root'. Making an entirely new secret is quite a chore and involves editing at least six files.
 		
 		add_secret = { 
 			type = secret_cannibal
@@ -659,6 +761,8 @@ PDXCON.300 = {
 		}	
 		trigger_event = PDXCON.300
 	}
+
+# Go back to the hallway
 
 	option = {
 		name = PDXCON.300.option.b
@@ -673,7 +777,7 @@ PDXCON.300 = {
 
 PDXCON.400 = {
 	type = character_event
-	title = PDXCON.400.t
+	title = PDXCON.400.t # Paradox Office
 	theme = PDXCON_office
 
 	desc = {
@@ -719,6 +823,8 @@ PDXCON.400 = {
 		}
 	
 	}	
+
+# Make Majesty III
 	
 	option = {
 		name = PDXCON.400.option.a
@@ -727,6 +833,10 @@ PDXCON.400 = {
 			NOT = { has_faith = faith:pdxcon_paradoxism }
 			NOT = { has_character_flag = PDXCON_400_pitched_majesty_3_flag }
 		}
+
+# To add an opinion modifier between characters, scope to the character who will have the opinion of the target. We scope to Fredrik Wester who will get a positive opinion of the 'target' character 'root' (the character getting the event). The command is 'add_opinion'. The modifier is 'PDXCON_liked_game_pitch_opinion' which is defined at common/opinion_modifiers/00_PDXCON_opinion_modifiers.txt 
+
+# Opinions list the value of the opinion as 'opinion', such as 'opinion = 5'. A time period can be set, such as 'years = 5'. The opinion can also set to incremently decline over time with 'decaying = yes'.
 		
 		scope:PDXCON_fred = {
 			add_opinion= {
@@ -734,6 +844,12 @@ PDXCON.400 = {
 				modifier = PDXCON_liked_game_pitch_opinion
 			}
 		}
+
+# To change a character's faith, use the command 'set_character_faith' in this case, 'set_character_faith = faith:pdxcon_paradoxism'. You can also use faith in triggers, such as 'has_faith = faith:pdxcon_paradoxism'. Do not forget to use 'faith:' when calling a faith. Religion and faith definitions are found at /common/religon/religions/ 
+
+# Faith icons in the '.dds' format are at /gfx/interface/icons/faith/ 
+
+# One quirk is that if you want to make a faith icon also avaiable for a custom faith, you must give it another name like 'pdxcon_paradoxism_custom' listed in the religion file in the 'custom_faith_icons' section.
 			
 		set_character_faith = faith:pdxcon_paradoxism
 
@@ -745,6 +861,8 @@ PDXCON.400 = {
 		add_character_flag = PDXCON_400_pitched_majesty_3_flag
 		trigger_event = PDXCON.400
 	}
+
+# Make Sengoku II
 
 	option = {
 		name = PDXCON.400.option.c
@@ -764,6 +882,8 @@ PDXCON.400 = {
 		trigger_event = PDXCON.400
 	}
 
+# Go back to the hallway
+
 	option = {
 		name = PDXCON.400.option.b
 		trigger_event = PDXCON.100
@@ -777,16 +897,41 @@ PDXCON.400 = {
 
 PDXCON.500 = {
 	type = character_event
-	title = PDXCON.500.t
+	title = PDXCON.500.t # Paradox Map Room
 	desc = PDXCON.500.desc
 	theme = PDXCON_map_room
+
+# Take the royal platypus skeleton as my sigil
 	
 	option = {
 		name = PDXCON.500.option.a
 		trigger = {
 			NOT = { has_character_flag = PDXCON_500_adopted_the_royal_platypus_skeleton_sigil }
 		}
+
+# Coat of Arms can be copied from one thing to another. Use the command: 
+
 		house = { set_coa = dynasty:PDXCON_paradox_dynasty }
+		
+# This will change the coat of arms of the player's house to that of the PDXCON_dynasty.Coat of Arms are defined in /common/coat_of_arms/coat_of_arms/
+
+# If you are running CK3 in debug mode, you can edit the coat of arms file in real time and the game will refresh the coat of arms displayed with your changes. This is how I easily edited so many different coat of arms for Princes of Darkness. You can quickly change colors, change the emblem being referenced, change the size(scale), position, rotation and orientaton of the emblem.
+
+# PDXCON_paradox_dynasty = {
+#	pattern = "pattern_solid.dds"
+#	color1 = "red"
+#	color2 = "white"
+#
+#	colored_emblem = {
+#		texture = "ce_PDXCON_paradox_01.dds"
+#		color1 = "yellow"
+#		color2 = "white"
+#		instance = { position = { 0.5 0.6 } scale = { 1.25 1.25 } }		
+#	}
+#}
+
+# The texture referenced in that file are found in /gfx/coat_of_arms/colored_emblems 	
+		
 		add_character_flag = PDXCON_500_adopted_the_royal_platypus_skeleton_sigil
 		add_secret = { 
 			type = secret_incest
@@ -796,6 +941,8 @@ PDXCON.500 = {
 		
 		trigger_event = PDXCON.500
 	}
+
+# Go back to the hallway
 
 	option = {
 		name = PDXCON.500.option.b
@@ -810,29 +957,35 @@ PDXCON.500 = {
 
 PDXCON.600 = {
 	type = character_event
-	title = PDXCON.600.t
+	title = PDXCON.600.t # Paradox Hall of Staff
 	desc = PDXCON.600.desc
 	theme = PDXCON_hallway_staff
 	
 	immediate = {
 		play_music_cue = "mx_cue_prison"
 	}
+
+# Go to the speakeasy
 	
 	option = {
 		name = PDXCON.600.option.a
 		trigger_event = PDXCON.700
 	}
 
+# Go to the music studio
+
 	option = {
 		name = PDXCON.600.option.b
 		trigger_event = PDXCON.800
 	}	
-			
+	
+# Go to the workspace	
 	option = {
 		name = PDXCON.600.option.c
 		trigger_event = PDXCON.900
 	}				
 
+# Return to the lobby
 	option = {
 		name = PDXCON.600.option.d
 		trigger_event = PDXCON.50
@@ -844,10 +997,12 @@ PDXCON.600 = {
 	
 }
 
+# You don't have to always follow Paradox's CK3 conventions or style guide with events. You don't have to include character portraits in events. You don't have to have event background images to be rooms in which a character is standing. You don't have to have event text to be in first person. You can use second-person point of view. You can use the royal 'we'. You can use 'single quotation marks' for dialogue instead of "double quotation marks". Do whatever you like. Be as creative as you want! You are a modder! This is a guide to modding, not a guide to writing great literature and poetry. David Faulkner had a 1,288 word run-on sentence. He is one of the most celebrated authors of American literature. Paradox Interactive highly regards American English which is why they use it in all their games rather than British Imperialist English (which will only be used for Victoria 3). If you change from the standard approach, you may get some complaints. If you decide to change the style in the mod, consistency may be important. Please do not make a 1,288 word run-on sentence in CK3. It would not fit in the event window without a scroll bar.
+
 
 PDXCON.700 = {
 	type = character_event
-	title = PDXCON.700.t
+	title = PDXCON.700.t # Paradox Speakeasy
 	desc = {
 		desc = PDXCON.700.desc
 		triggered_desc = {
@@ -876,6 +1031,10 @@ PDXCON.700 = {
 
 	immediate = {
 		play_music_cue = "mx_cue_meadandwine"
+
+# I greatly reduced the size of the random selections in the event code itself through use of a 'list'. This will make use of a scripted effect. One reason to use scripted effects is to isolate code from a specific event, particularly if you plan to reuse the effect more than once. If you don't plan to reuse code, then you might not put the effort into scripting a trigger or effect, but its generally a good practice to do so. Instead of 'random_list' where I list every potential character and then save scope, I use 'random_in_list'.
+
+# The 'list' is 'PDXCON_CK3_staff_list', which is a dynamic variable I set at the start of the event chain in the immediate clause of PDXCON.50 with the command 'PDXCON_populate_CK3_staff_list_effect = yes'. This effect is defined in /common/scripted_effects/PDXCON_staff_effects.txt 
 		
 		random_in_list = {
 			list = PDXCON_CK3_staff_list
@@ -894,6 +1053,10 @@ PDXCON.700 = {
 			save_scope_as = PDXCON_speakeasy_person_b
 		}
 	}
+
+# The drinking option uses 'random' to determine an outcome. For example, after a character already has the 'Tipsy at PDXCON' modifier, there is 30% chance with subsequent drinks that the character gains the drunkard trait.
+
+# Have a drink or three
 	
 	option = {
 		name = PDXCON.700.option.a
@@ -947,6 +1110,8 @@ PDXCON.700 = {
 		trigger_event = PDXCON.700
 	}
 
+# Go back to the hallway
+
 	option = {
 		name = PDXCON.700.option.b
 		trigger_event = PDXCON.600
@@ -958,16 +1123,21 @@ PDXCON.700 = {
 	
 }
 
-
 PDXCON.800 = {
 	type = character_event
-	title = PDXCON.800.t
+	title = PDXCON.800.t # Paradox Music Studio
 	desc = PDXCON.800.desc
 	theme = PDXCON_music_studio
 	
 	immediate = {
+	
+# I have used music cues throughout the mod's events. Music cues can be found at /music/music.txt. The syntax is simple, for example:
+	
 		play_music_cue = "main_theme_track"
+		
 	}
+
+# Grab the lyrics sheet.
 	
 	option = {
 		name = PDXCON.800.option.a
@@ -975,6 +1145,8 @@ PDXCON.800 = {
 			NOT = { has_character_flag = PDXCON_800_took_lyrics_sheet }
 		}
 		add_character_flag = PDXCON_800_took_lyrics_sheet
+		
+# Adding to an attribute skill is easy, for example:		
 		add_diplomacy_skill = 1
 		if = {
 			limit = {
@@ -988,6 +1160,8 @@ PDXCON.800 = {
 		trigger_event = PDXCON.800
 	}
 
+# Go back to the hallway
+
 	option = {
 		name = PDXCON.800.option.b
 		trigger_event = PDXCON.600
@@ -1000,9 +1174,16 @@ PDXCON.800 = {
 
 PDXCON.900 = {
 	type = character_event
-	title = PDXCON.900.t
+	title = PDXCON.900.t # Paradox Workspace
+	
+# To check out some of the options for changing colors and fonts, see the localization for the event: 'PDXCON.900.desc'	
+	
 	desc = PDXCON.900.desc
 	theme = PDXCON_workspace
+
+# DummyMale is an inside joke that future modders will not need to worry about. According to PDX: 'a number of mods use the DummyMale and DummyFemale characters for a lot of things they weren’t meant for. This was a result of lacking functionality, which we have now introduced in 1.3.X. With the need for this dummy-character removed, we will be deprecating it. That means that it’ll continue to work 1.3.X which introduces the replacement functionality, but that they will be largely removed in 1.4 to ensure that script and code are more maintainable in the long-term.'
+
+# A character was added via the history files. You can find the entry in /history/characters/PDXCON_characters.txt as 'PDXCON_maledummy'. You can scope to any character with 'character:' for example:
 	
 	right_portrait = {
 		character = scope:PDXCON_maledummy
@@ -1016,6 +1197,8 @@ PDXCON.900 = {
 			save_scope_as = PDXCON_maledummy
 		}
 	}
+
+# Take some notes to improve your modding
 	
 	option = {
 		name = PDXCON.900.option.a
@@ -1027,6 +1210,8 @@ PDXCON.900 = {
 		trigger_event = PDXCON.900
 	}
 
+# Go back to the hallway
+
 	option = {
 		name = PDXCON.900.option.b
 		trigger_event = PDXCON.600
@@ -1037,9 +1222,11 @@ PDXCON.900 = {
 	}
 }
 
+# Giving a character a crown
+
 PDXCON.1000 = {
 	type = character_event
-	title = PDXCON.1000.t
+	title = PDXCON.1000.t # Leaving Paradox Interactive
 	desc = PDXCON.1000.desc
 	theme = PDXCON_lobby
 
@@ -1060,8 +1247,27 @@ PDXCON.1000 = {
 		character:easteregg_troy_pruitt = {
 			save_scope_as = PDXCON_hat_bringer
 		}
+		
+# I have used a character flag to priortize the paradox crown to be displayed on the character's portrait:
+		
 		add_character_flag = PDXCON_wearing_paradox_crown_flag
 	}
+
+# The flag is checked by a trigger in scripted triggers: /common/scripted_triggers/PDXCON_clothing_triggers.txt 
+
+# PDXCON_crown_trigger = {
+# has_character_flag = PDXCON_wearing_paradox_crown_flag
+# }
+
+# Addding 3D portrait models like this crown involves several files: 
+# /common/genes/06_genes_special_accessories_headgear.txt
+# /gfx/portraits/portrait_modifiers/01_headgear.txt
+# /gfx/portraits/portrait_modifiers/01_custom_headgear.txt
+#/gfx/portraits/accessories/PDXCON_headgear.txt
+# And all the model files under this folder: # /gfx/models/portraits/attachments/male_headgears/secular/western/pdxcon_sample_01/
+# As well as the coresponding folder for 'female_headgears'
+
+# We shall take our leave
 
 	option = {
 		name = PDXCON.1000.option.a
@@ -1075,9 +1281,15 @@ PDXCON.1000 = {
 
 PDXCON.1100 = {
 	type = character_event
-	title = PDXCON.1100.t
+	title = PDXCON.1100.t # Synthetic Dawn Paradox
 	desc = PDXCON.1100.desc
 	theme = PDXCON_mars
+
+# Similar to adding a crown, the tommy gun was added as model. However, it is displayed by copying and modifying the spymaster animation and swapping the knife for the new tommy gun model. This is found in the following file: /gfx/portraits/portrait_animations/PDXCON_animations.txt
+# portrait_modifier = { 
+#	animations_props = PDXCON_tommy_gun_prop 
+#	animations = council_spymaster_decal
+# }
 
 	left_portrait = {
 		character = scope:PDXCON_synthetic_assassin
@@ -1096,6 +1308,8 @@ PDXCON.1100 = {
 			character:synthetic_leader = {
 				save_scope_as = PDXCON_synth_leader
 			}
+
+# The synthetic character is spawned with the 'create_character' command. All the relevant character details like attributes and traits are included inside the code block of 'create_character'.
 		
 			create_character = {
 				name = "HK-74"
@@ -1129,8 +1343,12 @@ PDXCON.1100 = {
 		}
 	}
 
+# Help Troy fight the Synthetic
+
 	option = {
 		name = PDXCON.1100.option.a
+
+# Chosing to help Troy fight creates a prowess attribute duel:
 
 		duel = {
 			skill = prowess
@@ -1189,6 +1407,8 @@ PDXCON.1100 = {
 		}		
 	}		
 
+# Flee, abandoning Troy to his fate.
+
 	option = {
 		name = PDXCON.1100.option.b
 		random_list = {
@@ -1228,15 +1448,18 @@ PDXCON.1100 = {
 
 PDXCON.1200 = {
 	type = character_event
+
+# I use a triggered description to change the title of the event depending on whether Troy was killed by the synthetic or not.
+	
 	title = {
 		first_valid = {
 			triggered_desc = {
 				trigger = {
 					scope:PDXCON_synth_fight = flag:troy_killed
 				}
-				desc = PDXCON.1200.t.dead_troy
+				desc = PDXCON.1200.t.dead_troy # R.I.P. Troy
 			}
-			desc = PDXCON.1200.t.dead_synth
+			desc = PDXCON.1200.t.dead_synth # Synthetic Dusted
 		}
 	}
 
@@ -1271,10 +1494,16 @@ PDXCON.1200 = {
 			}
 		}
 	}
+
+# What are these creatures? What do they want?
 	
 	option = {
 		name = PDXCON.1200.option.a
+		
+# Adding prestige is easy, it is just:
+		
 		add_prestige = 1000
+		
 		trigger_event = PDXCON.1300
 	}	
 	
@@ -1285,7 +1514,7 @@ PDXCON.1200 = {
 	
 PDXCON.1300 = {
 	type = character_event
-	title = PDXCON.1300.t
+	title = PDXCON.1300.t # A Custodian Cleans Things Up!
 	desc = PDXCON.1300.desc
 	theme = PDXCON_theater
 
@@ -1343,6 +1572,8 @@ PDXCON.1300 = {
 			save_scope_as = PDXCON_supporter_person_b
 		}
 
+# There is an 'if' and "else" statement that checks if Troy's character 'is_alive'. If Troy's character is alive, his portrait will be in the lower right during the selection of the Gamer Custodian, so thats nice!
+
 		if = {
 			limit = {
 				character:easteregg_troy_pruitt = { is_alive = no }
@@ -1366,13 +1597,16 @@ PDXCON.1300 = {
 			}	
 		}
 
+# To add titles and vassals to a character:
+
 		create_title_and_vassal_change = {
 			type = created
 			save_scope_as = change
 			add_claim_on_loss = no
 		}
-		
-		title:k_sweden = {
+
+# King of Sweden		
+		title:k_sweden = { 
 			change_title_holder = {
 				holder = root
 				change = scope:change
@@ -1448,6 +1682,8 @@ PDXCON.1300 = {
 		}
 	}
 
+# Now we can get things done.
+
 	option = {
 		name = PDXCON.1300.option.a
 		add_prestige = 4000		
@@ -1462,7 +1698,7 @@ PDXCON.1300 = {
 
 PDXCON.1400 = {
 	type = character_event
-	title = PDXCON.1400.t
+	title = PDXCON.1400.t # Synthetic Dawn III
 	desc = PDXCON.1400.desc
 	theme = PDXCON_mars
 
@@ -1518,6 +1754,8 @@ PDXCON.1400 = {
 			resolve_title_and_vassal_change = scope:change_synth
 			
 			scope:PDXCON_synth_leader = { 
+			
+# To add a pressed claim:			
 				add_pressed_claim = title:k_sweden
 				add_pressed_claim = title:k_england
 				add_pressed_claim = title:d_bedford
@@ -1547,6 +1785,8 @@ PDXCON.1400 = {
 				location = title:c_middlesex.title_province
 			}			
 		}
+
+# Rather than defining all the traits and attributes of a character in the 'create_character' commmand, I use a template. 'template = PDXCON_synthetic_template'. Templates are located at /common/scripted_character_templates/00_PDXCON_synthetic_character_templates.txt
 		
 		hidden_effect = {
 			create_character = {
@@ -1753,10 +1993,14 @@ PDXCON.1400 = {
 		resolve_title_and_vassal_change = scope:change_synth_d
 	}
 
+# Gamers playing mods: unite against these Iron Men!
+
 	option = {
 		name = PDXCON.1400.option.a
 		add_prestige = 4000
 		scope:PDXCON_synth_leader = {
+		
+# To start a war:		
 			start_war = {
 				casus_belli = claim_cb
 				target = title:k_sweden.holder
