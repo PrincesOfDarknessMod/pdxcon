@@ -10,7 +10,7 @@ PDXCON.50 = {
 				NOT = { has_character_flag = had_PDXCON_50_met_troy_flag }
 			}
 			desc = PDXCON.50.desc.meet_troy
-		}	
+		}
 	}
 	theme = PDXCON_lobby
 	left_portrait = {
@@ -19,6 +19,8 @@ PDXCON.50 = {
 	}
 	
 	immediate = {
+		
+		play_music_cue = "mx_cue_peace_ensues"
 		
 		if = {
 			limit = {
@@ -59,7 +61,13 @@ PDXCON.50 = {
 	}	
 	
 	after = {
-		add_character_flag = had_PDXCON_50_met_troy_flag
+		custom_tooltip = PDXCON.50.after.tt
+		if = { 
+			limit = {
+				NOT = { has_character_flag = had_PDXCON_50_met_troy_flag }
+			}
+			add_character_flag = had_PDXCON_50_met_troy_flag
+		}
 	}
 				
 }
@@ -82,19 +90,24 @@ PDXCON.100 = {
 	}	
 			
 	option = {
-		name = PDXCON.100.option.c
+		name = PDXCON.100.option.c	
 		trigger_event = PDXCON.400
 	}			
 			
 	option = {
 		name = PDXCON.100.option.d
+		play_music_cue = "mx_cue_touching_moment"
 		trigger_event = PDXCON.500
 	}			
 
 	option = {
 		name = PDXCON.100.option.e
 		trigger_event = PDXCON.50
-	}		
+	}	
+
+	after = {
+		custom_tooltip = PDXCON.100.after.tt
+	}	
 }
 
 PDXCON.200 = {
@@ -131,8 +144,8 @@ PDXCON.200 = {
 		animation = personality_honorable
 	}	
 	
-	immediate = {
-		play_music_cue = "mx_cue_epic_sacral_moment"	
+	immediate = {	
+		play_music_cue = "mx_cue_epic_sacral_moment"
 		
 		character:easteregg_alexander_oltner = {
 			save_scope_as = PDXCON_alex
@@ -166,9 +179,6 @@ PDXCON.200 = {
 		scope:PDXCON_henrik = {
 			add_stress = minor_stress_loss
 		}
-		
-		
-		
 		trigger_event = PDXCON.200
 	}
 
@@ -213,8 +223,11 @@ PDXCON.200 = {
 	option = {
 		name = PDXCON.200.option.b
 		trigger_event = PDXCON.100
+		#custom_tooltip = PDXCON.200.b.tt
 	}	
-				
+	after = {
+		custom_tooltip = PDXCON.200.after.tt
+	}	
 }
 
 PDXCON.300 = {
@@ -229,11 +242,11 @@ PDXCON.300 = {
 	
 	right_portrait = {
 		character = scope:PDXCON_lounge_person_b
-		animation = personality_honorable
+		animation = personality_idle
 	}			
 	
 	immediate = {
-
+		play_music_cue = "mx_cue_banquet"	
 		random_list = {
 			10 = {
 				character:easteregg_johan_andersson = {
@@ -651,6 +664,10 @@ PDXCON.300 = {
 		name = PDXCON.300.option.b
 		trigger_event = PDXCON.100
 	}	
+	
+	after = {
+		custom_tooltip = PDXCON.300.after.tt
+	}
 				
 }
 
@@ -683,17 +700,16 @@ PDXCON.400 = {
 
 	right_portrait = {
 	    character = scope:PDXCON_linda
-		animation = personality_bold
+		animation = personality_rational
 	}
 
 	left_portrait = {
 		character = scope:PDXCON_fred
-		animation = personality_honorable
+		animation = personality_bold
 	}
 
 	immediate = {
-		play_music_cue = "mx_cue_epic_sacral_moment"	
-		
+		play_music_cue = "mx_cue_sacredrite"		
 		character:easteregg_linda_tiger = {
 			save_scope_as = PDXCON_linda
 		}
@@ -706,6 +722,7 @@ PDXCON.400 = {
 	
 	option = {
 		name = PDXCON.400.option.a
+		play_music_cue = "mx_cue_faith_conversion"	
 		trigger = {
 			NOT = { has_faith = faith:pdxcon_paradoxism }
 			NOT = { has_character_flag = PDXCON_400_pitched_majesty_3_flag }
@@ -726,12 +743,12 @@ PDXCON.400 = {
 		}		
 		
 		add_character_flag = PDXCON_400_pitched_majesty_3_flag
-		
 		trigger_event = PDXCON.400
 	}
 
 	option = {
 		name = PDXCON.400.option.c
+		play_music_cue = "mx_cue_faith_conversion"	
 		trigger = {
 			NOT = { has_faith = faith:pdxcon_paradoxism }
 			NOT = { has_character_flag = PDXCON_400_pitched_sengoku_2_flag }
@@ -743,8 +760,7 @@ PDXCON.400 = {
 			target = root
 		}		
 		
-		add_character_flag = PDXCON_400_pitched_sengoku_2_flag
-		
+		add_character_flag = PDXCON_400_pitched_sengoku_2_flag	
 		trigger_event = PDXCON.400
 	}
 
@@ -752,6 +768,10 @@ PDXCON.400 = {
 		name = PDXCON.400.option.b
 		trigger_event = PDXCON.100
 	}	
+	
+	after = {
+		custom_tooltip = PDXCON.400.after.tt
+	}
 				
 }
 
@@ -761,25 +781,19 @@ PDXCON.500 = {
 	desc = PDXCON.500.desc
 	theme = PDXCON_map_room
 	
-	immediate = {
-		house = {
-			save_scope_as = PDXCON_house
-		}
-	}
-	
 	option = {
 		name = PDXCON.500.option.a
 		trigger = {
 			NOT = { has_character_flag = PDXCON_500_adopted_the_royal_platypus_skeleton_sigil }
 		}
-		scope:PDXCON_house = {
-			set_coa = dynasty:PDXCON_paradox_dynasty
-		}
+		house = { set_coa = dynasty:PDXCON_paradox_dynasty }
 		add_character_flag = PDXCON_500_adopted_the_royal_platypus_skeleton_sigil
 		add_secret = { 
 			type = secret_incest
 			target = root
-		}		
+		}
+		custom_tooltip =  PDXCON.500.option.a.tt
+		
 		trigger_event = PDXCON.500
 	}
 
@@ -787,6 +801,10 @@ PDXCON.500 = {
 		name = PDXCON.500.option.b
 		trigger_event = PDXCON.100
 	}	
+
+	after = {
+		custom_tooltip = PDXCON.500.after.tt
+	}
 				
 }
 
@@ -795,6 +813,10 @@ PDXCON.600 = {
 	title = PDXCON.600.t
 	desc = PDXCON.600.desc
 	theme = PDXCON_hallway_staff
+	
+	immediate = {
+		play_music_cue = "mx_cue_prison"
+	}
 	
 	option = {
 		name = PDXCON.600.option.a
@@ -814,7 +836,12 @@ PDXCON.600 = {
 	option = {
 		name = PDXCON.600.option.d
 		trigger_event = PDXCON.50
-	}		
+	}	
+
+	after = {
+		custom_tooltip = PDXCON.600.after.tt
+	}
+	
 }
 
 
@@ -838,17 +865,18 @@ PDXCON.700 = {
 	
 	left_portrait = {
 		character = scope:PDXCON_speakeasy_person_a
-		animation = personality_honorable
+		animation = idle
 	}
 	
 	right_portrait = {
 		character = scope:PDXCON_speakeasy_person_b
-		animation = personality_honorable
+		animation = happiness
 	}
 
 
 	immediate = {
-
+		play_music_cue = "mx_cue_meadandwine"
+		
 		random_in_list = {
 			list = PDXCON_CK3_staff_list
 			limit = { 
@@ -875,7 +903,7 @@ PDXCON.700 = {
 		}
 		
 		add_stress = minor_stress_loss
-		root = { remove_short_term_gold = -1 }
+		root = { remove_short_term_gold = 1 }
  		
 		if = {
 			limit = {
@@ -916,14 +944,18 @@ PDXCON.700 = {
 				}
 			}
 		}
-		
 		trigger_event = PDXCON.700
 	}
 
 	option = {
 		name = PDXCON.700.option.b
 		trigger_event = PDXCON.600
-	}			
+	}	
+
+	after = {
+		custom_tooltip = PDXCON.700.after.tt
+	}
+	
 }
 
 
@@ -932,6 +964,10 @@ PDXCON.800 = {
 	title = PDXCON.800.t
 	desc = PDXCON.800.desc
 	theme = PDXCON_music_studio
+	
+	immediate = {
+		play_music_cue = "main_theme_track"
+	}
 	
 	option = {
 		name = PDXCON.800.option.a
@@ -955,7 +991,11 @@ PDXCON.800 = {
 	option = {
 		name = PDXCON.800.option.b
 		trigger_event = PDXCON.600
-	}			
+	}	
+
+	after = {
+		custom_tooltip = PDXCON.800.after.tt
+	}
 }
 
 PDXCON.900 = {
@@ -966,10 +1006,12 @@ PDXCON.900 = {
 	
 	right_portrait = {
 		character = scope:PDXCON_maledummy
-		animation = severely_injured
+		animation = severelywounded
 	}
 	
 	immediate = {
+		play_music_cue = "mx_cue_prison"
+	
 		character:PDXCON_maledummy = {
 			save_scope_as = PDXCON_maledummy
 		}
@@ -988,7 +1030,11 @@ PDXCON.900 = {
 	option = {
 		name = PDXCON.900.option.b
 		trigger_event = PDXCON.600
-	}			
+	}	
+
+	after = {
+		custom_tooltip = PDXCON.900.after.tt
+	}
 }
 
 PDXCON.1000 = {
@@ -999,16 +1045,18 @@ PDXCON.1000 = {
 
 	left_portrait = {
 		character = root
-		animation = personality_honorable
+		#animation = war_over_win
+		animation = scheme
 	}
 	
 	right_portrait = {
 		character = scope:PDXCON_hat_bringer
-		animation = personality_honorable
+		animation = beg
 	}
 
-	
 	immediate = {
+		play_music_cue = "mx_cue_succession_instrumental"
+	
 		character:easteregg_troy_pruitt = {
 			save_scope_as = PDXCON_hat_bringer
 		}
@@ -1018,7 +1066,11 @@ PDXCON.1000 = {
 	option = {
 		name = PDXCON.1000.option.a
 		trigger_event = PDXCON.1100
-	}			
+	}
+
+	after = {
+		custom_tooltip = PDXCON.1000.after.tt
+	}
 }
 
 PDXCON.1100 = {
@@ -1034,12 +1086,12 @@ PDXCON.1100 = {
 	
 	lower_right_portrait = {
 		character = scope:PDXCON_hat_bringer
-		animation = marshall
+		animation = rage
 	}
 
-
-
 	immediate = {
+		play_music_cue = "mx_cue_combat_3"
+	
 		hidden_effect = {
 			character:synthetic_leader = {
 				save_scope_as = PDXCON_synth_leader
@@ -1166,7 +1218,12 @@ PDXCON.1100 = {
 		trigger_event = {
 			id = PDXCON.1200
 		}	
-	}		
+	}
+
+	after = {
+		custom_tooltip = PDXCON.1100.after.tt
+	}
+	
 }
 
 PDXCON.1200 = {
@@ -1201,6 +1258,9 @@ PDXCON.1200 = {
 	}
 
 	immediate = {
+	
+		play_music_cue = "mx_cue_death"
+		
 		hidden_effect = {
 			add_character_modifier = {
 				modifier = PDXCON_has_tommygun_modifier
@@ -1217,6 +1277,10 @@ PDXCON.1200 = {
 		add_prestige = 1000
 		trigger_event = PDXCON.1300
 	}	
+	
+	after = {
+		custom_tooltip = PDXCON.1200.after.tt
+	}
 }
 	
 PDXCON.1300 = {
@@ -1232,17 +1296,17 @@ PDXCON.1300 = {
 	
 	right_portrait = {
 		character = scope:PDXCON_fred
-		animation = personality_honorable
+		animation = flirtation
 	}	
 
 	lower_left_portrait = {
 		character = scope:PDXCON_supporter_person_a
-		animation = personality_honorable
+		animation = personality_vengeful
 	}
 
 	lower_center_portrait = {
 		character = scope:PDXCON_supporter_person_b
-		animation = personality_honorable
+		animation = anger
 	}
 	
 	lower_right_portrait = {
@@ -1251,6 +1315,8 @@ PDXCON.1300 = {
 	}	
 	
 	immediate = {
+
+		play_music_cue = "main_theme_track"
 
 		character:easteregg_fredrik_wester = {
 			save_scope_as = PDXCON_fred
@@ -1277,17 +1343,27 @@ PDXCON.1300 = {
 			save_scope_as = PDXCON_supporter_person_b
 		}
 
-		random_in_list = { 
-			list = PDXCON_CK3_staff_list
+		if = {
 			limit = {
-				is_available = yes		
-				OR = {
-					NOT = { this = scope:PDXCON_supporter_person_a }
-					NOT = { this = scope:PDXCON_supporter_person_b }
-					NOT = { this = scope:PDXCON_fred }
+				character:easteregg_troy_pruitt = { is_alive = no }
+			}		
+			random_in_list = { 
+				list = PDXCON_CK3_staff_list
+				limit = {
+					is_available = yes		
+					OR = {
+						NOT = { this = scope:PDXCON_supporter_person_a }
+						NOT = { this = scope:PDXCON_supporter_person_b }
+						NOT = { this = scope:PDXCON_fred }
+					}
 				}
+				save_scope_as = PDXCON_supporter_person_c
 			}
-			save_scope_as = PDXCON_supporter_person_c
+		}
+		else = {
+			character:easteregg_troy_pruitt = {
+				save_scope_as = PDXCON_supporter_person_c
+			}	
 		}
 
 		create_title_and_vassal_change = {
@@ -1369,7 +1445,52 @@ PDXCON.1300 = {
 			}
 			
 			location = title:c_upland.title_province
-		}		
+		}
+	}
+
+	option = {
+		name = PDXCON.1300.option.a
+		add_prestige = 4000		
+		trigger_event = PDXCON.1400
+	}
+
+	after = {	
+		custom_tooltip = PDXCON.1300.after.tt
+	}
+
+}
+
+PDXCON.1400 = {
+	type = character_event
+	title = PDXCON.1400.t
+	desc = PDXCON.1400.desc
+	theme = PDXCON_mars
+
+	left_portrait = {
+		character = scope:PDXCON_synth_leader
+		animation = personality_bold
+		#war_attacker
+	}
+	
+	right_portrait = {
+		character = scope:PDXCON_synthetic_sublord_a
+		animation = war_attacker
+	}	
+
+	lower_left_portrait = {
+		character = scope:PDXCON_synthetic_sublord_b
+		animation = war_attacker
+	}
+
+	
+	lower_right_portrait = {
+		character = scope:PDXCON_synthetic_sublord_c
+		animation = war_attacker
+	}
+
+	immediate = {
+
+		play_music_cue = "mx_cue_crusade_starts"		
 		
 		hidden_effect = {				
 		
@@ -1412,7 +1533,7 @@ PDXCON.1300 = {
 				inheritable = no
 				name = sterlization_army_01_event_troops
 				levies = {
-					value = 50000
+					value = 100000
 				}
 				men_at_arms = {
 					type = bombard
@@ -1471,7 +1592,7 @@ PDXCON.1300 = {
 				inheritable = no
 				name = sterlization_army_02_event_troops
 				levies = {
-					value = 50000
+					value = 100000
 				}
 				men_at_arms = {
 					type = bombard
@@ -1486,6 +1607,7 @@ PDXCON.1300 = {
 		}	
 
 		hidden_effect = {
+		
 			create_character = {
 				name = "AK_H_22"
 				mother = scope:PDXCON_synth_leader
@@ -1529,7 +1651,7 @@ PDXCON.1300 = {
 				inheritable = no
 				name = sterlization_army_03_event_troops
 				levies = {
-					value = 50000
+					value = 100000
 				}
 				men_at_arms = {
 					type = bombard
@@ -1587,7 +1709,7 @@ PDXCON.1300 = {
 					inheritable = no
 					name = sterlization_army_04_event_troops
 					levies = {
-						value = 50000
+						value = 100000
 					}
 					men_at_arms = {
 						type = bombard
@@ -1632,14 +1754,23 @@ PDXCON.1300 = {
 	}
 
 	option = {
-		name = PDXCON.1300.option.a
+		name = PDXCON.1400.option.a
 		add_prestige = 4000
+		scope:PDXCON_synth_leader = {
+			start_war = {
+				casus_belli = claim_cb
+				target = title:k_sweden.holder
+				claimant = scope:PDXCON_synth_leader
+			}
+		}
 	}
 
-	after = {
-			set_global_variable = {
+	after = {	
+		set_global_variable = {
 			name = variable_PDXCON_is_over
 			value = yes
 		}
+		custom_tooltip = PDXCON.1400.after.tt
 	}
+	
 }

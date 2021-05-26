@@ -1,0 +1,14 @@
+﻿l_english:
+
+ building_type_PDXCON_paradox_office_01:0 "Paradox Interactive Office"
+ building_type_PDXCON_paradox_office_02:0 "Paradox Interactive Office"
+ building_type_PDXCON_paradox_office_03:0 "Paradox Interactive Office"
+ building_PDXCON_paradox_office_01:0 "Paradox New Studio"
+ building_PDXCON_paradox_office_01_desc:1 "#F An office space used by Paradox Interactive to make games: "We Make the Games, You Make the Stories!#"
+ 
+ building_PDXCON_paradox_office_02:0 "Paradox Mature Studio"
+ building_PDXCON_paradox_office_02_desc:1 "#F An office space used by Paradox Interactive to make games: "We Make the Game, You Make the Stories!#"
+ 
+ building_PDXCON_paradox_office_03:0 "Paradox Interactive Main Office"
+ building_PDXCON_paradox_office_03_desc:1 "#F An office space used by Paradox Interactive to make games: "We Make the Games, You Make the Stories!#"
+ 

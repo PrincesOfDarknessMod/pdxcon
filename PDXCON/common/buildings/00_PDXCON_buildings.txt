@@ -1,0 +1,87 @@
+﻿####################
+# PDXCON Buildings #
+####################
+
+PDXCON_paradox_office_01 = {
+	construction_time = standard_construction_time
+
+	can_construct_potential = {
+#		scope:holder = {
+#			has_trait = PDXCON_paradox
+#		}
+	}
+	type_icon = "icon_building_PDXCON_paradox_office.dds"
+	
+	cost_gold = normal_building_tier_1_cost
+	levy = normal_building_levy_tier_1
+	county_modifier = {
+		development_growth_factor = 0.01
+	}	
+
+	province_modifier = {
+		monthly_income = normal_building_tax_tier_1
+	}
+	
+	next_building = PDXCON_paradox_office_02
+	
+	ai_value = {
+		base = 0
+	}
+}
+
+PDXCON_paradox_office_02 = {
+	construction_time = slow_construction_time
+
+	can_construct_potential = {
+#		scope:holder = {
+#			has_trait = PDXCON_paradox
+#		}
+	}
+
+	type_icon = "icon_building_PDXCON_paradox_office.dds"
+	
+	cost_gold = normal_building_tier_2_cost
+	levy = normal_building_levy_tier_2
+	
+	county_modifier = {
+		development_growth_factor = 0.02
+	}	
+
+	province_modifier = {
+		monthly_income = normal_building_tax_tier_2
+	}
+	
+	next_building = PDXCON_paradox_office_03
+	
+	ai_value = {
+		base = 0
+	}
+	
+}
+
+PDXCON_paradox_office_03 = {
+	construction_time = very_slow_construction_time
+
+	can_construct_potential = {
+#		scope:holder = {
+#			has_trait = PDXCON_paradox
+#		}
+	}
+
+	type_icon = "icon_building_PDXCON_paradox_office.dds"
+	
+	cost_gold = normal_building_tier_3_cost
+	levy = normal_building_levy_tier_3
+	
+	county_modifier = {
+		development_growth_factor = 0.03
+	}	
+
+	province_modifier = {
+		monthly_income = normal_building_tax_tier_3
+	}
+	
+	ai_value = {
+		base = 0
+	}
+}

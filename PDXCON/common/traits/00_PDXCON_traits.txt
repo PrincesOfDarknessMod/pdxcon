@@ -18,8 +18,8 @@ PDXCON_paradox = {
 			
 			triggered_desc = {
 				trigger = {
-					is_female = no
 					exists = this
+					is_female = no
 				}
 				desc = trait_PDXCON_paradox_desc_he
 			}	

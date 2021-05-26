@@ -178,10 +178,10 @@ accessory_genes = {
 		fp1_spymasters_dagger = {
 			index = 13
 			male = {
-				1 = portrait_prop_thompson_smg
+				1 = fp1_spymasters_dagger_01
 			}
 			female = {
-				1 = portrait_prop_thompson_smg			
+				1 = fp1_spymasters_dagger_01			
 			}
 			boy = male
 			girl = female

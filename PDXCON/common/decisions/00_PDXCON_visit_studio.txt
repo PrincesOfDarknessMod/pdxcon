@@ -14,8 +14,8 @@ visit_PDXCON_decision = {
 	}
 
 	effect = {
+		custom_tooltip = visit_PDXCON_decision_effect_tooltip
 		trigger_event = PDXCON.50
-	
 	}
 
 }	

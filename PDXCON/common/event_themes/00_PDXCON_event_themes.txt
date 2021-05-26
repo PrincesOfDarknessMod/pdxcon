@@ -25,7 +25,7 @@ PDXCON_hallway_titles = {
 		reference = "gfx/interface/icons/event_types/type_learning.dds"
 	}
 	sound = {
-		reference = "event:/SFX/Events/Themes/sfx_event_theme_type_learning"
+		reference = "event:/SFX/Events/Themes/sfx_event_theme_type_intrigue"
 	}
 
 	background = {
@@ -65,10 +65,10 @@ PDXCON_theater = {
 
 PDXCON_lounge = {
 	icon = {
-		reference = "gfx/interface/icons/event_types/type_stewardship.dds"
+		reference = "gfx/interface/icons/event_types/type_feast.dds"
 	}
 	sound = {
-		reference = "event:/SFX/Events/Themes/sfx_event_theme_type_stewardship"
+		reference = "event:/SFX/Events/Themes/sfx_event_theme_type_social"
 	}
 
 	background = {
@@ -100,7 +100,7 @@ PDXCON_map_room = {
 		reference = "gfx/interface/icons/event_types/type_diplomacy.dds"
 	}
 	sound = {
-		reference = "event:/SFX/Events/Themes/sfx_event_theme_type_diplomacy"
+		reference = "event:/SFX/Events/Themes/sfx_event_theme_type_learning"
 	}
 
 	background = {
@@ -112,10 +112,10 @@ PDXCON_map_room = {
 
 PDXCON_speakeasy = {
 	icon = {
-		reference = "gfx/interface/icons/event_types/type_diplomacy.dds"
+		reference = "gfx/interface/icons/event_types/type_feast.dds"
 	}
 	sound = {
-		reference = "event:/SFX/Events/Themes/sfx_event_theme_type_diplomacy"
+		reference = "event:/SFX/Events/Themes/sfx_event_theme_type_social"
 	}
 
 	background = {
@@ -142,10 +142,10 @@ PDXCON_music_studio = {
 
 PDXCON_workspace = {
 	icon = {
-		reference = "gfx/interface/icons/event_types/type_diplomacy.dds"
+		reference = "gfx/interface/icons/event_types/type_prison.dds"
 	}
 	sound = {
-		reference = "event:/SFX/Events/Themes/sfx_event_theme_type_diplomacy"
+		reference = "event:/SFX/Events/Themes/sfx_event_theme_type_prison"
 	}
 
 	background = {
@@ -157,7 +157,7 @@ PDXCON_workspace = {
 
 PDXCON_mars = {
 	icon = {
-		reference = "gfx/interface/icons/event_types/type_martial.dds"
+		reference = "gfx/interface/icons/event_types/type_war.dds"
 	}
 	sound = {
 		reference = "event:/SFX/Events/Themes/sfx_event_theme_type_war"
