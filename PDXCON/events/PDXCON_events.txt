@@ -24,7 +24,7 @@ namespace = PDXCON
 
 # Be sure to have a unique namespace at the top of your event file. For this event chain I use 'namespace=PDXCON'
 
-# The event script can be found at /events/PDXCON_events.txt \n\nLocalization for events can be anywhere under /localization/english/ , but I like to organize things into separate folders as much as possible. Since there is only one event chain in the mod I'm using /localization/english/events/PDXCON_events_l_english.yml
+# The event script can be found at /events/PDXCON_events.txt Localization for events can be anywhere under /localization/english/ , but I like to organize things into separate folders as much as possible. Since there is only one event chain in the mod I'm using /localization/english/events/PDXCON_events_l_english.yml
 
 # The suffix of '_l_english.yml' is very important. Failure to use this suffix will cause the localization to not be displayed. Save the file with UTF-8-BOM encoding.
 
