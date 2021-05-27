@@ -1,0 +1,5 @@
+﻿l_simp_chinese:
+ visit_PDXCON_decision_desc:0 "在P社嘉年华期间参观P社Interactive工作室"
+ visit_PDXCON_decision_effect_tooltip:1 "你将参观P社在斯德哥尔摩的办公室。\n\n*** 这个P社嘉年华MOD制作教程大量使用提示，向玩家们解释决议、事件等是如何编写的***\n\n决议：\n\n决议位置： /common/decisions/00_PDXCON_visit_studio.txt\n\n决议插图： /gfx/interface/illustrations/decisions/decision_visit_PDXCON.dds\n\n决议翻译： /localization/english/PDXCON_decisions_l_english.yml\n\n建筑：\n\n在地图上的斯德哥尔摩、于默奥和巴塞罗那都有P社办公室，建筑自定义位置：/common/buildings/00_PDXCON_buildings.txt\n\n建筑图标：/gfx/interface/icons/building_types/icon_building_PDXCON_paradox_office.dds\n\n建筑翻译：/localization/english/PDXCON_buildings_l_english.yml"
+ visit_PDXCON_decision_confirm:0 "我们开始吧！"
+ visit_PDXCON_decision:0 "参观P社"
