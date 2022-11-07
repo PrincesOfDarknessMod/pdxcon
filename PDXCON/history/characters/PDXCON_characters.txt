@@ -1,9 +1,42 @@
-﻿
+﻿easteregg_fredrik_wester = {
+	name = "Fredrik"
+	dna = easteregg_fredrik_wester
+	dynasty = PDXCON_wester_dynasty # Wester
+	martial = 7
+	diplomacy = 7
+	intrigue = 7
+	stewardship = 7
+	learning = 7
+
+	religion = pdxcon_paradoxism #catholic
+	culture = "swedish"
+
+	trait = education_stewardship_4
+	trait = deceitful
+	trait = callous
+	trait = greedy
+	trait = avaricious
+
+	1020.6.2 = {
+		birth = "1030.6.2"
+		effect = {
+			add_character_flag = has_scripted_appearance
+			add_character_flag = no_headgear
+		}	
+	}
+	1066.1.1 = {
+		employer = 20015 #Umeå
+	}
+	1066.9.16 = {
+		death = "1066.9.16"
+	}
+}
+
 easteregg_troy_pruitt = { #Community Manager
 	name = "Troy"
 	dynasty = PDXCON_pruitt_dynasty # pruitt
 	dna = PDXCON_troy_pruitt_DNA
-	religion = catholic
+	religion = pdxcon_paradoxism #catholic
 	culture = welsh
 	female = no
 	#dna = 
@@ -111,6 +144,8 @@ PDXCON_maledummy = { #Community Manager
 	trait = lazy
 	trait = stubborn
 	trait = dull
+	trait = maimed
+	trait = one_legged
 	
 	#Other Traits
 	

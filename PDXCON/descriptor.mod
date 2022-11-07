@@ -1,6 +1,14 @@
-version="1"
+version="1.4"
 tags={
+	"Alternative History"
+	"Character Interactions"
+	"Culture"
+	"Decisions"
+	"Events"
 	"Utilities"
+	"Graphics"
+	"Warfare"
+	"Religion"
 }
 name="PDXCON"
-supported_version="1.3.1"
+supported_version="1.7.*"

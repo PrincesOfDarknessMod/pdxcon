@@ -4,7 +4,6 @@
 
 e_contingency = {
 	color = { 100 100 100 }
-	color2= { 100 100 100 }
 	capital = c_middlesex
 	definite_form = yes
 	no_automatic_claims = yes 

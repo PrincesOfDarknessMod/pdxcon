@@ -7,12 +7,13 @@ visit_PDXCON_decision = {
 	major = yes
 	
 	cooldown = { days = 10 }
-
+	
+	ai_check_interval = 0
+	
 	is_shown = {
 		is_ai = no
 		NOT = { has_global_variable = variable_PDXCON_is_over }
 	}
-
 	effect = {
 		custom_tooltip = visit_PDXCON_decision_effect_tooltip
 		trigger_event = PDXCON.50

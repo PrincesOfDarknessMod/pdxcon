@@ -57,7 +57,7 @@ PDXCON.50 = {
 	
 	immediate = {
 		
-		play_music_cue = "mx_cue_peace_ensues"
+		play_music_cue = "mx_cue_positive_effect"
 		
 		if = {
 			limit = {
@@ -1133,7 +1133,7 @@ PDXCON.800 = {
 	
 # I have used music cues throughout the mod's events. Music cues can be found at /music/music.txt. The syntax is simple, for example:
 	
-		play_music_cue = "main_theme_track"
+		play_music_cue = "mx_cue_ck3_vocal_maintheme"
 		
 	}
 
@@ -1545,7 +1545,7 @@ PDXCON.1300 = {
 	
 	immediate = {
 
-		play_music_cue = "main_theme_track"
+		play_music_cue = "mx_cue_ck3_vocal_maintheme"
 
 		character:easteregg_fredrik_wester = {
 			save_scope_as = PDXCON_fred

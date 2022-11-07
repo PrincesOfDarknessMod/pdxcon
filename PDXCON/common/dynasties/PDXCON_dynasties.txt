@@ -17,3 +17,9 @@ PDXCON_pruitt_dynasty = {
 	culture = "swedish"
 	motto = dynn_PDXCON_pruitt_motto
 }
+
+PDXCON_wester_dynasty = {
+	name= "dynn_PDXCON_wester"
+	culture = "swedish"
+	motto = dynn_PDXCON_wester_motto
+}

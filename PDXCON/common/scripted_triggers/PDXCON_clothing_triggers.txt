@@ -21,7 +21,7 @@ PDXCON_tommygun_trigger = {
 	
 	OR = {
 		has_character_modifier = PDXCON_has_tommygun_modifier
-		has_characer_flag = PDXCON_has_tommygun_flag
+		has_character_flag = PDXCON_has_tommygun_flag
 	}
 
 }

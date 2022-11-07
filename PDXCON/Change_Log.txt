@@ -2,6 +2,8 @@
 
 The larger the mod and the more changes are made, the more modders need to make one of these.
 
+Made by Sparc (Princes of Darkness) and El Tyranos (Community Flavor Pack)
+
 # 1.0 May 23, 2021: Initial Release
 
 # 1.1 May 25, 2021: Tooltipapalooza
@@ -20,3 +22,18 @@ The larger the mod and the more changes are made, the more modders need to make 
 # 1.2 May 26, 2021: Comments
 	* Added comments to events script
 	* Typo fixes for event localization
+	
+# 1.3 May 28, 2021: Chinese Translation
+	* Chinese Translation by Juijote 
+	* Minor fix to comments in event script
+	
+# 1.4 November 7, 2022: Gene Fixes
+	* Update mod to CK3 1.7.2
+	* Updated genes (index numbers) and graphic portrait modifiers
+	* Minor fixes for error log happiness
+	* Restored (PARODY) Fred Wester's Easter Egg character. Going forward, PDXCON Tutorial Mod Characters that engage in impersonation without clearly specifying 'parody' will be permanently suspended.
+	* Fixed (PARODY) Troy's hair, beard and hat
+	* Embellished the Pruitt Coat of Arms.  Swapped Bear for Lion. Added Helm with a Raven on it.
+	* Male Dummy is no longer naked.
+	* Fixed some broken music cues.
+	* Localization fix: Synthetic Forces land in Moskva, not Rome.
